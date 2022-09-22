@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "1"; ObjectID = "3Aa-13-4Rb"; */
+"3Aa-13-4Rb.text" = "1";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3kY-0I-7DL"; */
+"3kY-0I-7DL.text" = "Label";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "8Vp-4S-As7"; */
+"8Vp-4S-As7.text" = "السعر";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "Eto-67-uij"; */
+"Eto-67-uij.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Eto-67-uij"; */
+"Eto-67-uij.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XYL-sR-NNu"; */
+"XYL-sR-NNu.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "ZqO-6f-UJ9"; */
+"ZqO-6f-UJ9.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ZqO-6f-UJ9"; */
+"ZqO-6f-UJ9.normalTitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "m7z-zn-4ml"; */
+"m7z-zn-4ml.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "m7z-zn-4ml"; */
+"m7z-zn-4ml.normalTitle" = " ";

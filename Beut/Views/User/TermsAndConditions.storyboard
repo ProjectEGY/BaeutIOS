@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Terms Conditions-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TermsConditions" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gw-35-Wry">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6gw-35-Wry" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="257-n4-EH0"/>
+                            <constraint firstItem="6gw-35-Wry" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="WQi-RQ-1KF"/>
+                            <constraint firstItem="6gw-35-Wry" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="bBO-b4-j2t"/>
+                            <constraint firstItem="6gw-35-Wry" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vEh-ys-6j6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TermsConditions" destination="6gw-35-Wry" id="zYx-qL-Kzj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-635" y="-158"/>
+        </scene>
+        <!--Online PaymentVC-->
+        <scene sceneID="pkg-03-dr5">
+            <objects>
+                <viewController storyboardIdentifier="OnlinePaymentVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cZt-XY-3JU" customClass="OnlinePaymentVC" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KIh-tI-aIm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcS-cU-gvP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L30-wp-twU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fcS-cU-gvP" firstAttribute="bottom" secondItem="L30-wp-twU" secondAttribute="bottom" id="HuE-65-lIO"/>
+                            <constraint firstItem="fcS-cU-gvP" firstAttribute="leading" secondItem="L30-wp-twU" secondAttribute="leading" id="OyF-Du-nq9"/>
+                            <constraint firstItem="fcS-cU-gvP" firstAttribute="top" secondItem="L30-wp-twU" secondAttribute="top" id="hRa-xU-iLj"/>
+                            <constraint firstItem="fcS-cU-gvP" firstAttribute="trailing" secondItem="L30-wp-twU" secondAttribute="trailing" id="zaq-ud-QNo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="paymentWebView" destination="fcS-cU-gvP" id="GZG-sC-76w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATH-Jj-XLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="267" y="-174"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

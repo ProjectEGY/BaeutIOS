@@ -1,0 +1,21 @@
+
+/* Class = "UIViewController"; title = "Accout Settings"; ObjectID = "Y6W-OH-hqX"; */
+"Y6W-OH-hqX.title" = "إعدادات الحساب";
+
+/* Class = "UILabel"; text = "Full Name"; ObjectID = "cT5-8O-6TZ"; */
+"cT5-8O-6TZ.text" = "الاسم بالكامل";
+
+/* Class = "UIButton"; configuration.title = "Edit"; ObjectID = "eJi-oM-dpY"; */
+"eJi-oM-dpY.configuration.title" = "تعديل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "eJi-oM-dpY"; */
+"eJi-oM-dpY.normalTitle" = "تعديل";
+
+/* Class = "UITextField"; placeholder = "UserName"; ObjectID = "pOd-wb-5bX"; */
+"pOd-wb-5bX.placeholder" = "اسم المستخدم";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "waL-1K-7n8"; */
+"waL-1K-7n8.placeholder" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "zmw-UW-yfK"; */
+"zmw-UW-yfK.text" = "رقم الهاتف";

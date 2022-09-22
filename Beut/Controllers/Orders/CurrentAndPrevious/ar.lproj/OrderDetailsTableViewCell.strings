@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Canceld"; ObjectID = "2Nw-tF-giT"; */
+"2Nw-tF-giT.text" = "تم الإلغاء";
+
+/* Class = "UILabel"; text = "Order Details"; ObjectID = "6aE-qu-Veh"; */
+"6aE-qu-Veh.text" = "تفاصيل الطلب";
+
+/* Class = "UILabel"; text = "Order number:"; ObjectID = "8aL-SE-lTh"; */
+"8aL-SE-lTh.text" = "رقم الطلب:";
+
+/* Class = "UILabel"; text = "orderDate"; ObjectID = "QpF-4Q-kWY"; */
+"QpF-4Q-kWY.text" = "orderDate";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "ikW-ir-udN"; */
+"ikW-ir-udN.text" = "Name";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "rDL-Yr-Skn"; */
+"rDL-Yr-Skn.text" = "Address";
+
+/* Class = "UILabel"; text = "58896"; ObjectID = "ruD-Ss-M5p"; */
+"ruD-Ss-M5p.text" = "58896";

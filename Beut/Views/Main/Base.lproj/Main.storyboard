@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FJF-Br-5o9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SignIn-->
+        <scene sceneID="4Ro-mS-VKf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignIn" id="IeF-Nr-Aoj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="b95-Js-fK3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2h-ua-YPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7651" y="-1053"/>
+        </scene>
+        <!--on-boarding01-->
+        <scene sceneID="xac-Ax-Q1l">
+            <objects>
+                <viewController storyboardIdentifier="OnBoardingViewController" title="on-boarding01" modalPresentationStyle="fullScreen" id="FJF-Br-5o9" customClass="OnBoardingViewController" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WsG-76-Mga">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-ly-oOL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="480"/>
+                                <color key="backgroundColor" name="EsfenjaColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7nR-Xh-4pA">
+                                    <size key="itemSize" width="414" height="482"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnBoardingCollectionViewCell" id="ZN1-so-3i8" customClass="OnBoardingCollectionViewCell" customModule="Esfenja" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-1" width="414" height="482"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oFw-co-nxF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="482"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItZ-U2-by9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="482"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ESFENJA" translatesAutoresizingMaskIntoConstraints="NO" id="pi6-GG-XFZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ff" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yV-qg-vPs">
+                                                            <rect key="frame" x="20" y="386" width="374" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="EsfenjaColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="7yV-qg-vPs" firstAttribute="height" secondItem="ItZ-U2-by9" secondAttribute="height" multiplier="0.0478528" constant="12.934969325153375" id="1qY-3T-yad"/>
+                                                        <constraint firstItem="pi6-GG-XFZ" firstAttribute="leading" secondItem="ItZ-U2-by9" secondAttribute="leading" id="9hm-HW-RPn"/>
+                                                        <constraint firstItem="pi6-GG-XFZ" firstAttribute="height" secondItem="ItZ-U2-by9" secondAttribute="height" multiplier="0.418405" constant="158.32883435582821" id="Jcj-Zg-dkY"/>
+                                                        <constraint firstItem="7yV-qg-vPs" firstAttribute="centerX" secondItem="ItZ-U2-by9" secondAttribute="centerX" id="Myv-vd-Be5"/>
+                                                        <constraint firstItem="pi6-GG-XFZ" firstAttribute="top" secondItem="ItZ-U2-by9" secondAttribute="top" id="NEJ-PE-uBl"/>
+                                                        <constraint firstItem="7yV-qg-vPs" firstAttribute="width" secondItem="ItZ-U2-by9" secondAttribute="width" multiplier="0.903382" id="Uij-OQ-W5s"/>
+                                                        <constraint firstItem="7yV-qg-vPs" firstAttribute="top" secondItem="pi6-GG-XFZ" secondAttribute="bottom" constant="26" id="YoU-e5-Yjl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="pi6-GG-XFZ" secondAttribute="trailing" id="qD0-nK-ePN"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" name="EsfenjaColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ItZ-U2-by9" secondAttribute="trailing" id="Lyg-We-d6g"/>
+                                                <constraint firstItem="ItZ-U2-by9" firstAttribute="leading" secondItem="oFw-co-nxF" secondAttribute="leading" id="lFx-qm-U1X"/>
+                                                <constraint firstAttribute="bottom" secondItem="ItZ-U2-by9" secondAttribute="bottom" id="nFE-yU-RaP"/>
+                                                <constraint firstItem="ItZ-U2-by9" firstAttribute="top" secondItem="oFw-co-nxF" secondAttribute="top" id="z2O-vt-yY2"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="EsfenjaColor"/>
+                                        <size key="customSize" width="414" height="482"/>
+                                        <connections>
+                                            <outlet property="descLbl" destination="7yV-qg-vPs" id="Nbb-OQ-cAh"/>
+                                            <outlet property="myImage" destination="pi6-GG-XFZ" id="Bjv-Xa-dat"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="FJF-Br-5o9" id="Kej-6t-rXC"/>
+                                    <outlet property="delegate" destination="FJF-Br-5o9" id="6J0-Rb-nSg"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="1QN-vl-9Sb">
+                                <rect key="frame" x="100" y="559" width="214" height="26"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPI-QJ-wAP">
+                                <rect key="frame" x="235" y="643" width="159" height="39"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign In"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signIn:" destination="FJF-Br-5o9" eventType="touchUpInside" id="MI1-cx-MU8"/>
+                                    <segue destination="IeF-Nr-Aoj" kind="show" id="H1B-gw-G3t"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By joining you agree to ours Terms of Service and Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-IJ-mtE">
+                                <rect key="frame" x="20" y="739" width="374" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQu-72-WGA">
+                                <rect key="frame" x="20" y="643" width="159" height="39"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign Up"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUp:" destination="FJF-Br-5o9" eventType="touchUpInside" id="XVH-oy-ElE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OnI-gL-GM4"/>
+                        <color key="backgroundColor" name="EsfenjaColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="1QN-vl-9Sb" firstAttribute="top" secondItem="bmz-ly-oOL" secondAttribute="bottom" constant="35" id="2MQ-ZD-Dbh"/>
+                            <constraint firstItem="1QN-vl-9Sb" firstAttribute="width" secondItem="WsG-76-Mga" secondAttribute="width" multiplier="0.516908" id="3ai-u5-UqZ"/>
+                            <constraint firstItem="OnI-gL-GM4" firstAttribute="bottom" secondItem="ji1-IJ-mtE" secondAttribute="bottom" constant="69" id="4af-y2-uT4"/>
+                            <constraint firstItem="1QN-vl-9Sb" firstAttribute="centerX" secondItem="OnI-gL-GM4" secondAttribute="centerX" id="A3F-E2-K7s"/>
+                            <constraint firstItem="ji1-IJ-mtE" firstAttribute="centerX" secondItem="OnI-gL-GM4" secondAttribute="centerX" id="Lms-Vg-rKI"/>
+                            <constraint firstItem="eQu-72-WGA" firstAttribute="top" secondItem="1QN-vl-9Sb" secondAttribute="bottom" constant="58" id="N14-gp-P6z"/>
+                            <constraint firstItem="ji1-IJ-mtE" firstAttribute="width" secondItem="WsG-76-Mga" secondAttribute="width" multiplier="0.903382" id="NEw-RQ-QfY"/>
+                            <constraint firstItem="bmz-ly-oOL" firstAttribute="leading" secondItem="OnI-gL-GM4" secondAttribute="leading" id="PKC-sf-dtU"/>
+                            <constraint firstItem="ji1-IJ-mtE" firstAttribute="height" secondItem="WsG-76-Mga" secondAttribute="height" multiplier="0.0602679" id="QF7-ud-Ik5"/>
+                            <constraint firstItem="bmz-ly-oOL" firstAttribute="top" secondItem="WsG-76-Mga" secondAttribute="top" constant="44" id="TtM-eD-M8K"/>
+                            <constraint firstItem="sPI-QJ-wAP" firstAttribute="height" secondItem="WsG-76-Mga" secondAttribute="height" multiplier="0.0435268" id="UzV-kQ-zje"/>
+                            <constraint firstItem="1QN-vl-9Sb" firstAttribute="height" secondItem="WsG-76-Mga" secondAttribute="height" multiplier="0.0290179" id="Y5Z-gT-z8S"/>
+                            <constraint firstItem="eQu-72-WGA" firstAttribute="width" secondItem="WsG-76-Mga" secondAttribute="width" multiplier="0.384058" id="fD0-h2-h4F"/>
+                            <constraint firstItem="bmz-ly-oOL" firstAttribute="trailing" secondItem="OnI-gL-GM4" secondAttribute="trailing" id="l7B-hx-HMO"/>
+                            <constraint firstItem="OnI-gL-GM4" firstAttribute="trailing" secondItem="sPI-QJ-wAP" secondAttribute="trailing" constant="20" id="nQ4-Ip-F1I"/>
+                            <constraint firstItem="sPI-QJ-wAP" firstAttribute="centerY" secondItem="eQu-72-WGA" secondAttribute="centerY" id="qJ5-8O-cPZ"/>
+                            <constraint firstItem="eQu-72-WGA" firstAttribute="height" secondItem="WsG-76-Mga" secondAttribute="height" multiplier="0.0435268" id="qbw-o1-1X3"/>
+                            <constraint firstItem="sPI-QJ-wAP" firstAttribute="width" secondItem="WsG-76-Mga" secondAttribute="width" multiplier="0.384058" id="r1t-GW-JNy"/>
+                            <constraint firstItem="eQu-72-WGA" firstAttribute="leading" secondItem="OnI-gL-GM4" secondAttribute="leading" constant="20" id="xwf-jB-F7l"/>
+                            <constraint firstAttribute="bottom" secondItem="bmz-ly-oOL" secondAttribute="bottom" constant="372" id="z3w-b2-Ece"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ldi-Ap-MkU">
+                        <barButtonItem key="backBarButtonItem" title=" " id="8m3-fD-uip"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="onBoardingCollectionView" destination="bmz-ly-oOL" id="iA4-B1-jWD"/>
+                        <outlet property="pageControl" destination="1QN-vl-9Sb" id="Nz0-az-dNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8TV-5k-o9a" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8448" y="-1059"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ESFENJA" width="326" height="326"/>
+        <namedColor name="EsfenjaColor">
+            <color red="0.11100000143051147" green="0.29300001263618469" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

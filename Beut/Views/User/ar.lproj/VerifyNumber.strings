@@ -1,0 +1,15 @@
+
+/* Class = "UIViewController"; title = "Verify Number"; ObjectID = "BuQ-9P-Faz"; */
+"BuQ-9P-Faz.title" = "تأكيد رقم الهاتف";
+
+/* Class = "UIButton"; configuration.title = "Continue"; ObjectID = "HIA-Xn-562"; */
+"HIA-Xn-562.configuration.title" = "الاستمرار";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HIA-Xn-562"; */
+"HIA-Xn-562.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "Verfication"; ObjectID = "O5o-CJ-NVq"; */
+"O5o-CJ-NVq.text" = "التأكيد";
+
+/* Class = "UILabel"; text = "Please enter verify code sent to your phone number"; ObjectID = "cfl-KJ-sy4"; */
+"cfl-KJ-sy4.text" = "من فضلك ادخل كود التفعيل المرسل إلى رقم هاتفك";

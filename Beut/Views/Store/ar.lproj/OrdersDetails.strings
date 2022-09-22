@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "2YJ-xp-UY4"; */
+"2YJ-xp-UY4.text" = "الإجمالي";
+
+/* Class = "UIButton"; configuration.title = "Cash on delivery"; ObjectID = "5Kt-5k-IxX"; */
+"5Kt-5k-IxX.configuration.title" = "الدفع عند الإستلام";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5Kt-5k-IxX"; */
+"5Kt-5k-IxX.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "6Xf-k2-Kzx"; */
+"6Xf-k2-Kzx.text" = "الإجمالي";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "8eZ-NE-w9A"; */
+"8eZ-NE-w9A.text" = "Date";
+
+/* Class = "UILabel"; text = "Sub total"; ObjectID = "L36-Gt-7Lh"; */
+"L36-Gt-7Lh.text" = "تكلفة الطلب";
+
+/* Class = "UILabel"; text = "Delivery fees"; ObjectID = "Ygs-1R-3Db"; */
+"Ygs-1R-3Db.text" = "قيمة التوصيل";
+
+/* Class = "UILabel"; text = "Delivery fees"; ObjectID = "atU-TU-h3A"; */
+"atU-TU-h3A.text" = "قيمة التوصيل";
+
+/* Class = "UILabel"; text = "Order Number: "; ObjectID = "bx6-Wr-6YT"; */
+"bx6-Wr-6YT.text" = "رقم الطلب:";
+
+/* Class = "UILabel"; text = "Shipping to"; ObjectID = "egp-7M-kyB"; */
+"egp-7M-kyB.text" = "عنوان التوصيل";
+
+/* Class = "UILabel"; text = "Order Details"; ObjectID = "g6g-Nh-ppZ"; */
+"g6g-Nh-ppZ.text" = "تفاصيل الطلب";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "vk0-1x-JTT"; */
+"vk0-1x-JTT.text" = "العنوان";
+
+/* Class = "UILabel"; text = "status"; ObjectID = "vuV-8O-n8m"; */
+"vuV-8O-n8m.text" = "status";
+
+/* Class = "UILabel"; text = "Sub total"; ObjectID = "zaS-85-7Tk"; */
+"zaS-85-7Tk.text" = "تكلفة الطلب";

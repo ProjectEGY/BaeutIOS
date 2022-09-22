@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BuQ-9P-Faz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Verify Number-->
+        <scene sceneID="JXh-Ow-pWs">
+            <objects>
+                <viewController storyboardIdentifier="VerifyNumberID" title="Verify Number" id="BuQ-9P-Faz" customClass="VerfiyNumberViewController" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hg6-VO-jS9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ESFENJA" translatesAutoresizingMaskIntoConstraints="NO" id="IK2-kT-ws0">
+                                <rect key="frame" x="87" y="173" width="240" height="173"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verfication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5o-CJ-NVq">
+                                <rect key="frame" x="166" y="412" width="82.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter verify code sent to your phone number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfl-KJ-sy4">
+                                <rect key="frame" x="10" y="469" width="394" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIA-Xn-562">
+                                <rect key="frame" x="20" y="677" width="374" height="54"/>
+                                <color key="backgroundColor" name="EsfenjaColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="verfiyAccount:" destination="BuQ-9P-Faz" eventType="touchUpInside" id="c78-sr-og7"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxN-ef-RA1" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="146" y="403" width="122" height="100.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="EOl-Ka-ahh">
+                                <rect key="frame" x="20" y="592" width="374" height="43"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJa-DA-M5d">
+                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="43"/>
+                                        <color key="backgroundColor" red="0.88196414710000004" green="0.8782246709" blue="0.89534717799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="moveToDigit2:" destination="BuQ-9P-Faz" eventType="editingChanged" id="hez-Ma-lh9"/>
+                                            <outlet property="delegate" destination="BuQ-9P-Faz" id="OJ9-j2-n7m"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FcR-Nz-MVE">
+                                        <rect key="frame" x="103.5" y="0.0" width="63.5" height="43"/>
+                                        <color key="backgroundColor" red="0.88196414710000004" green="0.8782246709" blue="0.89534717799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="moveToDigit3:" destination="BuQ-9P-Faz" eventType="editingChanged" id="inc-rh-gsD"/>
+                                            <outlet property="delegate" destination="BuQ-9P-Faz" id="QZw-qm-eID"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZ5-Zu-d5H">
+                                        <rect key="frame" x="207" y="0.0" width="63.5" height="43"/>
+                                        <color key="backgroundColor" red="0.88196414710000004" green="0.8782246709" blue="0.89534717799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="moveToDigit4:" destination="BuQ-9P-Faz" eventType="editingChanged" id="U35-jn-dQA"/>
+                                            <outlet property="delegate" destination="BuQ-9P-Faz" id="JrW-au-cLH"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDj-0C-TYz">
+                                        <rect key="frame" x="310.5" y="0.0" width="63.5" height="43"/>
+                                        <color key="backgroundColor" red="0.88196414710000004" green="0.8782246709" blue="0.89534717799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="activeButton:" destination="BuQ-9P-Faz" eventType="editingChanged" id="wmN-pZ-mM5"/>
+                                            <outlet property="delegate" destination="BuQ-9P-Faz" id="z2a-FY-WrF"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="4c0-VO-p5W"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NUA-pt-fMi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BxN-ef-RA1" firstAttribute="width" secondItem="Hg6-VO-jS9" secondAttribute="width" multiplier="0.294686" id="71R-PG-ecN"/>
+                            <constraint firstItem="HIA-Xn-562" firstAttribute="width" secondItem="Hg6-VO-jS9" secondAttribute="width" multiplier="0.903382" id="8JR-4e-uOD"/>
+                            <constraint firstItem="O5o-CJ-NVq" firstAttribute="top" secondItem="IK2-kT-ws0" secondAttribute="bottom" constant="66" id="8z7-Q7-rIE"/>
+                            <constraint firstItem="IK2-kT-ws0" firstAttribute="height" secondItem="Hg6-VO-jS9" secondAttribute="height" multiplier="0.19308" id="BQv-Zx-s8P"/>
+                            <constraint firstItem="EOl-Ka-ahh" firstAttribute="leading" secondItem="NUA-pt-fMi" secondAttribute="leading" constant="20" id="CHA-Mg-3mn"/>
+                            <constraint firstItem="IK2-kT-ws0" firstAttribute="width" secondItem="Hg6-VO-jS9" secondAttribute="width" multiplier="0.57971" id="DJ0-7s-kKN"/>
+                            <constraint firstItem="cfl-KJ-sy4" firstAttribute="top" secondItem="O5o-CJ-NVq" secondAttribute="bottom" constant="36.5" id="E8s-9A-P0B"/>
+                            <constraint firstItem="HIA-Xn-562" firstAttribute="top" secondItem="EOl-Ka-ahh" secondAttribute="bottom" constant="42" id="ERK-OO-xOx"/>
+                            <constraint firstItem="cfl-KJ-sy4" firstAttribute="width" secondItem="Hg6-VO-jS9" secondAttribute="width" multiplier="0.951691" id="JL8-CU-0IB"/>
+                            <constraint firstItem="BxN-ef-RA1" firstAttribute="height" secondItem="Hg6-VO-jS9" secondAttribute="height" multiplier="0.112165" id="P4x-zW-xhj"/>
+                            <constraint firstItem="BxN-ef-RA1" firstAttribute="centerX" secondItem="NUA-pt-fMi" secondAttribute="centerX" id="TAI-sU-dS8"/>
+                            <constraint firstItem="NUA-pt-fMi" firstAttribute="trailing" secondItem="EOl-Ka-ahh" secondAttribute="trailing" constant="20" id="afG-xN-Q03"/>
+                            <constraint firstItem="cfl-KJ-sy4" firstAttribute="height" secondItem="Hg6-VO-jS9" secondAttribute="height" multiplier="0.0569196" id="cKi-Pa-x8R"/>
+                            <constraint firstItem="BxN-ef-RA1" firstAttribute="centerY" secondItem="NUA-pt-fMi" secondAttribute="centerY" id="gSV-Ub-ONY"/>
+                            <constraint firstItem="HIA-Xn-562" firstAttribute="height" secondItem="Hg6-VO-jS9" secondAttribute="height" multiplier="0.0602679" id="koY-g9-fGX"/>
+                            <constraint firstItem="HIA-Xn-562" firstAttribute="centerX" secondItem="NUA-pt-fMi" secondAttribute="centerX" id="oE2-dR-Kj2"/>
+                            <constraint firstItem="O5o-CJ-NVq" firstAttribute="centerX" secondItem="IK2-kT-ws0" secondAttribute="centerX" id="q32-u2-Nnh"/>
+                            <constraint firstItem="EOl-Ka-ahh" firstAttribute="centerX" secondItem="NUA-pt-fMi" secondAttribute="centerX" id="rBH-tS-pd5"/>
+                            <constraint firstItem="cfl-KJ-sy4" firstAttribute="centerX" secondItem="NUA-pt-fMi" secondAttribute="centerX" id="rwn-dN-jMA"/>
+                            <constraint firstItem="EOl-Ka-ahh" firstAttribute="top" secondItem="cfl-KJ-sy4" secondAttribute="bottom" constant="72" id="vZW-6k-v3k"/>
+                            <constraint firstItem="IK2-kT-ws0" firstAttribute="top" secondItem="NUA-pt-fMi" secondAttribute="top" constant="129" id="wDv-VY-yG0"/>
+                            <constraint firstItem="IK2-kT-ws0" firstAttribute="centerX" secondItem="NUA-pt-fMi" secondAttribute="centerX" id="zbO-SS-7Yh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YFr-qj-ixN"/>
+                    <connections>
+                        <outlet property="continueBtn" destination="HIA-Xn-562" id="Pr3-h7-Zc0"/>
+                        <outlet property="digit1" destination="zJa-DA-M5d" id="qHM-MA-FSK"/>
+                        <outlet property="digit2" destination="FcR-Nz-MVE" id="fLy-LI-D3u"/>
+                        <outlet property="digit3" destination="XZ5-Zu-d5H" id="3c0-nR-2BM"/>
+                        <outlet property="digit4" destination="EDj-0C-TYz" id="Olo-VG-QVh"/>
+                        <outlet property="verifyIndicator" destination="BxN-ef-RA1" id="YFK-pA-nZE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FO6-oK-akP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4136.231884057971" y="-1071.4285714285713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ESFENJA" width="326" height="326"/>
+        <namedColor name="EsfenjaColor">
+            <color red="0.11100000143051147" green="0.29300001263618469" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

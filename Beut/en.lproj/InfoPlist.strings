@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  Esfenja
+
+  Created by ProjectEgy on 24/08/2022.
+  
+*/
+"CFBundleName" = "Beaut";
+
+"NSLocationWhenInUseUsageDescription" = "Beaut needs to access your location to show you the services near you";

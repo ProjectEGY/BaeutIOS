@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Select Country"; ObjectID = "43Z-Ba-TYI"; */
+"43Z-Ba-TYI.text" = "اختر الدولة";
+
+/* Class = "UIButton"; normalTitle = " "; ObjectID = "4N9-lW-aba"; */
+"4N9-lW-aba.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "Select City"; ObjectID = "OGQ-iN-bnB"; */
+"OGQ-iN-bnB.text" = "اختر المدينة";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "eWj-sf-vmJ"; */
+"eWj-sf-vmJ.normalTitle" = "التالي";

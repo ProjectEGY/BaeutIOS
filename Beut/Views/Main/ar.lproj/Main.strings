@@ -1,0 +1,21 @@
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "8m3-fD-uip"; */
+"8m3-fD-uip.title" = " ";
+
+/* Class = "UIViewController"; title = "on-boarding01"; ObjectID = "FJF-Br-5o9"; */
+"FJF-Br-5o9.title" = "on-boarding01";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "eQu-72-WGA"; */
+"eQu-72-WGA.configuration.title" = "إنشاء حساب";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "eQu-72-WGA"; */
+"eQu-72-WGA.normalTitle" = "إنشاء حساب";
+
+/* Class = "UILabel"; text = "By joining you agree to ours Terms of Service and Privacy Policy"; ObjectID = "ji1-IJ-mtE"; */
+"ji1-IJ-mtE.text" = "من خلال الانضمام فإنك توافق على شروط الخدمة وسياسة الخصوصية الخاصة بنا";
+
+/* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "sPI-QJ-wAP"; */
+"sPI-QJ-wAP.configuration.title" = "تسجيل الدخول";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sPI-QJ-wAP"; */
+"sPI-QJ-wAP.normalTitle" = "تسجيل الدخول";

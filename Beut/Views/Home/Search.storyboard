@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchID" title="Search" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="Search" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Find a store anywhere" translatesAutoresizingMaskIntoConstraints="NO" id="ktE-0N-gTO">
+                                <rect key="frame" x="70.5" y="63" width="273" height="51"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="M3M-Iq-Yqy"/>
+                                </connections>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTo-eq-rBw" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="167.5" y="415" width="79" height="66"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FyJ-DY-tTM">
+                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="9y0-Bk-p2e"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="kFE-m3-vFx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ktE-0N-gTO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="5EA-1h-LFn"/>
+                            <constraint firstItem="FyJ-DY-tTM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6dN-PA-D4Q"/>
+                            <constraint firstItem="VTo-eq-rBw" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8Uy-f5-fuu"/>
+                            <constraint firstItem="VTo-eq-rBw" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.190821" id="IPa-Zh-Xdr"/>
+                            <constraint firstItem="FyJ-DY-tTM" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Zk6-dh-QR5"/>
+                            <constraint firstItem="ktE-0N-gTO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="buY-JZ-HrK"/>
+                            <constraint firstItem="FyJ-DY-tTM" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="e5J-UL-yeO"/>
+                            <constraint firstItem="FyJ-DY-tTM" firstAttribute="top" secondItem="ktE-0N-gTO" secondAttribute="bottom" id="flc-9p-IFe"/>
+                            <constraint firstItem="VTo-eq-rBw" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ixv-Hm-fLh"/>
+                            <constraint firstItem="ktE-0N-gTO" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.65942" id="kCX-6w-sNq"/>
+                            <constraint firstItem="VTo-eq-rBw" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0736607" id="oko-Bp-PCc"/>
+                            <constraint firstItem="ktE-0N-gTO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="19" id="reT-ej-zQy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="ktE-0N-gTO" id="pmv-fo-wzQ"/>
+                        <outlet property="searchIndicator" destination="VTo-eq-rBw" id="vFx-9T-sGo"/>
+                        <outlet property="searchResultsTableView" destination="FyJ-DY-tTM" id="ora-Pa-nSY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1rt-bG-wvV"/>
+            </objects>
+            <point key="canvasLocation" x="-118.84057971014494" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

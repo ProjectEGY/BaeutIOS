@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; configuration.title = "Send"; ObjectID = "EZK-7R-qRN"; */
+"EZK-7R-qRN.configuration.title" = "Send";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "EZK-7R-qRN"; */
+"EZK-7R-qRN.normalTitle" = "ارسال";
+
+/* Class = "UITextField"; placeholder = "Write your complaint here"; ObjectID = "GLC-Bd-DMO"; */
+"GLC-Bd-DMO.placeholder" = "اكتب شكوتك ";
+
+/* Class = "UILabel"; text = "Message"; ObjectID = "sFn-9Q-LZg"; */
+"sFn-9Q-LZg.text" = "الرسالة";

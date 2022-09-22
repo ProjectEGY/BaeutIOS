@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Notifications-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="CustomNotifications" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No notifications yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTr-OG-MqW">
+                                <rect key="frame" x="133" y="437.5" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4e-OA-H7g" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="158.5" y="405" width="97" height="86"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2nG-Yt-wut">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="h4U-m7-bSX"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="mNO-e1-hM7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F4e-OA-H7g" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8Fv-ol-nGX"/>
+                            <constraint firstItem="F4e-OA-H7g" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="RBA-UN-dg3"/>
+                            <constraint firstItem="F4e-OA-H7g" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.2343" id="VaN-aT-Dp4"/>
+                            <constraint firstItem="YTr-OG-MqW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Y9p-UE-8F9"/>
+                            <constraint firstItem="2nG-Yt-wut" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="bx4-EG-hs3"/>
+                            <constraint firstItem="YTr-OG-MqW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="geK-yC-RU9"/>
+                            <constraint firstItem="F4e-OA-H7g" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0959821" id="iuy-dh-wn5"/>
+                            <constraint firstItem="2nG-Yt-wut" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="l6q-hj-Ydy"/>
+                            <constraint firstItem="YTr-OG-MqW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="rPD-cS-7M5"/>
+                            <constraint firstItem="2nG-Yt-wut" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="rr4-Bg-Pd8"/>
+                            <constraint firstItem="YTr-OG-MqW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="wWA-sf-fBO"/>
+                            <constraint firstItem="2nG-Yt-wut" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-20" id="wsD-Dx-bqB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lbl" destination="YTr-OG-MqW" id="mbA-xU-JHd"/>
+                        <outlet property="noNotifications" destination="YTr-OG-MqW" id="laj-xR-1Df"/>
+                        <outlet property="notificationsIndicator" destination="F4e-OA-H7g" id="9Dc-lj-Fhb"/>
+                        <outlet property="notificationsTableView" destination="2nG-Yt-wut" id="5dH-Bk-XCg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157.97101449275362" y="164.73214285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

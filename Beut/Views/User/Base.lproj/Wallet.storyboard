@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wallet View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="WalletViewController" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83W-LP-HlV">
+                                <rect key="frame" x="46" y="150" width="322" height="36"/>
+                                <color key="backgroundColor" name="EsfenjaColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Current Charge">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nD-rm-HHP">
+                                <rect key="frame" x="46" y="184" width="322" height="315"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHY-aX-aYu">
+                                <rect key="frame" x="46" y="569" width="322" height="52"/>
+                                <color key="backgroundColor" name="EsfenjaColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Charge your wallet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chargeWallet:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KaS-wU-3wk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mHY-aX-aYu" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="3pY-Uh-niq"/>
+                            <constraint firstItem="8nD-rm-HHP" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.777778" id="DKM-ZZ-dva"/>
+                            <constraint firstItem="8nD-rm-HHP" firstAttribute="top" secondItem="83W-LP-HlV" secondAttribute="bottom" constant="-2" id="Fkf-RL-EfO"/>
+                            <constraint firstItem="mHY-aX-aYu" firstAttribute="top" secondItem="8nD-rm-HHP" secondAttribute="bottom" constant="70" id="HaO-zT-LUZ"/>
+                            <constraint firstItem="mHY-aX-aYu" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.777778" id="I0S-7h-32H"/>
+                            <constraint firstItem="83W-LP-HlV" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.777778" id="SYf-G4-CUb"/>
+                            <constraint firstItem="8nD-rm-HHP" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.351562" id="WNa-g4-k4U"/>
+                            <constraint firstItem="83W-LP-HlV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="106" id="Z6N-vN-wTk"/>
+                            <constraint firstItem="83W-LP-HlV" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="eiM-aV-0oe"/>
+                            <constraint firstItem="mHY-aX-aYu" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0580357" id="fKU-UH-GmY"/>
+                            <constraint firstItem="83W-LP-HlV" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0401786" id="hMr-Bi-BEm"/>
+                            <constraint firstItem="8nD-rm-HHP" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="vkN-SN-mV1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="wallet" destination="8nD-rm-HHP" id="58I-vd-WCw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410.14492753623193" y="96.428571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="EsfenjaColor">
+            <color red="0.11100000143051147" green="0.29300001263618469" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "JgV-03-edF"; */
+"JgV-03-edF.text" = "الاسم";
+
+/* Class = "UILabel"; text = "Quantity"; ObjectID = "PmI-7J-xhf"; */
+"PmI-7J-xhf.text" = "الكمية";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "WMe-AS-b0o"; */
+"WMe-AS-b0o.text" = "Description";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "olT-ua-0yv"; */
+"olT-ua-0yv.text" = "السعر";

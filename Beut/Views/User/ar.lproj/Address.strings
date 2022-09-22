@@ -1,0 +1,18 @@
+
+/* Class = "UITextField"; placeholder = "Building"; ObjectID = "0sd-gJ-PjL"; */
+"0sd-gJ-PjL.placeholder" = "المبنى";
+
+/* Class = "UITextField"; placeholder = "Address in details"; ObjectID = "4AW-VR-P4M"; */
+"4AW-VR-P4M.placeholder" = "العنوان بالتفصيل";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "Leh-41-rTL"; */
+"Leh-41-rTL.placeholder" = "الاسم";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "MX3-di-gmT"; */
+"MX3-di-gmT.normalTitle" = "تم";
+
+/* Class = "UITextField"; placeholder = "Floor"; ObjectID = "aBi-NI-KU8"; */
+"aBi-NI-KU8.placeholder" = "رقم الطابق";
+
+/* Class = "UITextField"; placeholder = "Appartment"; ObjectID = "izW-1J-yxP"; */
+"izW-1J-yxP.placeholder" = "رقم الشقة";

@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Esfenja
+
+  Created by ProjectEgy on 24/08/2022.
+  
+*/
+"CFBundleName" = "بيوت";
+
+"NSLocationWhenInUseUsageDescription" = "يحتاج بيوت موقعك ليعرض لك الخدمات القريبة منك";
+

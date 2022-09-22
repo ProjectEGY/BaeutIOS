@@ -1,0 +1,76 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "144-mn-6rd"; */
+"144-mn-6rd.text" = "Label";
+
+/* Class = "UILabel"; text = "Options"; ObjectID = "3Lf-kZ-XWr"; */
+"3Lf-kZ-XWr.text" = "Options";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "ALT-X0-pwg"; */
+"ALT-X0-pwg.text" = "12";
+
+/* Class = "UISegmentedControl"; BKl-6Q-GiS.segmentTitles[0] = "Services"; ObjectID = "BKl-6Q-GiS"; */
+"BKl-6Q-GiS.segmentTitles[0]" = "خدمات";
+
+/* Class = "UISegmentedControl"; BKl-6Q-GiS.segmentTitles[1] = "Packages"; ObjectID = "BKl-6Q-GiS"; */
+"BKl-6Q-GiS.segmentTitles[1]" = "الباقات";
+
+/* Class = "UISegmentedControl"; BKl-6Q-GiS.segmentTitles[2] = "Subscribe"; ObjectID = "BKl-6Q-GiS"; */
+"BKl-6Q-GiS.segmentTitles[2]" = "الاشتراك";
+
+/* Class = "UIButton"; normalTitle = " "; ObjectID = "II6-gh-JhG"; */
+"II6-gh-JhG.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "NwP-yL-SuE"; */
+"NwP-yL-SuE.text" = "3";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "O7p-XT-Fbd"; */
+"O7p-XT-Fbd.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Q4l-sh-y91"; */
+"Q4l-sh-y91.text" = "Label";
+
+/* Class = "UIViewController"; title = "Item Details"; ObjectID = "QNh-Pc-Qpd"; */
+"QNh-Pc-Qpd.title" = "Item Details";
+
+/* Class = "UILabel"; text = "No data available"; ObjectID = "TtW-bM-F4u"; */
+"TtW-bM-F4u.text" = "لا يوجد";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Vnz-OA-27N"; */
+"Vnz-OA-27N.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Wwa-sw-etf"; */
+"Wwa-sw-etf.text" = "Label";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "bca-k3-bAw"; */
+"bca-k3-bAw.text" = "Name";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "gCV-cQ-ag8"; */
+"gCV-cQ-ag8.text" = "3";
+
+/* Class = "UIButton"; normalTitle = "Add To Basket"; ObjectID = "gJQ-ek-jv6"; */
+"gJQ-ek-jv6.normalTitle" = "إضافة إلى السلة";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "k0l-jt-HQf"; */
+"k0l-jt-HQf.text" = "Label";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "l2s-lS-hTJ"; */
+"l2s-lS-hTJ.text" = "1";
+
+/* Class = "UILabel"; text = "0.0"; ObjectID = "oWY-Dw-ZJk"; */
+"oWY-Dw-ZJk.text" = "0.0";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tHb-a7-YJs"; */
+"tHb-a7-YJs.text" = "Label";
+
+/* Class = "UILabel"; text = "Views"; ObjectID = "wXe-ve-lFR"; */
+"wXe-ve-lFR.text" = "عدد المشاهدات";
+
+/* Class = "UIButton"; normalTitle = " "; ObjectID = "zbN-x8-9HT"; */
+"zbN-x8-9HT.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "TXB-EZ-LFv"; */
+"TXB-EZ-LFv.text" = "   الأحجام";
+
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "n5s-YO-38c"; */
+"n5s-YO-38c.text" = "  الإضافات";

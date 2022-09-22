@@ -1,0 +1,48 @@
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "4UI-mR-gIH"; */
+"4UI-mR-gIH.normalTitle" = "Create Account";
+
+/* Class = "UILabel"; text = "Forget Password?"; ObjectID = "4gp-JX-KsL"; */
+"4gp-JX-KsL.text" = "Forget Password?";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "CAW-8D-LIn"; */
+"CAW-8D-LIn.placeholder" = "Password";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "CCJ-js-aZj"; */
+"CCJ-js-aZj.title" = " ";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Cm4-gT-oZX"; */
+"Cm4-gT-oZX.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "GVR-rB-u0i"; */
+"GVR-rB-u0i.placeholder" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Sign In with Facebook"; ObjectID = "K90-4j-wXp"; */
+"K90-4j-wXp.normalTitle" = "Sign In with Facebook";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "L9T-U6-sm3"; */
+"L9T-U6-sm3.placeholder" = "Phone Number";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "ZAT-CP-wpc"; */
+"ZAT-CP-wpc.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "cYy-hZ-WzL"; */
+"cYy-hZ-WzL.normalTitle" = "Sign In";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "cph-uK-qvH"; */
+"cph-uK-qvH.placeholder" = "Phone Number";
+
+/* Class = "UIViewController"; title = "Sign Up"; ObjectID = "dzM-6l-89V"; */
+"dzM-6l-89V.title" = "Sign Up";
+
+/* Class = "UIViewController"; title = "LogIn"; ObjectID = "e5G-hs-N3k"; */
+"e5G-hs-N3k.title" = "LogIn";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "g0H-bp-eRi"; */
+"g0H-bp-eRi.placeholder" = "Confirm Password";
+
+/* Class = "UILabel"; text = "Don't have an account? Sign Up"; ObjectID = "ghF-BE-gqd"; */
+"ghF-BE-gqd.text" = "Don't have an account? Sign Up";
+
+/* Class = "UILabel"; text = "Sign in to continue"; ObjectID = "pVG-g9-5ka"; */
+"pVG-g9-5ka.text" = "Sign in to continue";
