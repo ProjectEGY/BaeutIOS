@@ -122,7 +122,7 @@ struct NetworkService {
                 completion: completion)
     }
     
-    func search(parameters: JSON?, completion: @escaping(Result<GeneralResponse<[SearchResult]>, Error>) -> Void){
+    func search(parameters: JSON?, completion: @escaping(Result<GeneralResponse<[ProductModel]>, Error>) -> Void){
         request(route: .search, method: .get,parameters: parameters,
                 completion: completion)
     }
@@ -163,6 +163,12 @@ struct NetworkService {
     
     func forgetPassword(parameters: JSON?, completion: @escaping(Result<GeneralResponse<String>, Error>) -> Void){
         request(route: .forgetPassword, method: .post,parameters: parameters,
+                isAuthorizedRequest:true,
+                completion: completion)
+    }
+    
+    func getOffers(parameters: JSON?, completion: @escaping(Result<GeneralResponse<[ProductModel]>, Error>) -> Void){
+        request(route: .offers, method: .get,parameters: parameters,
                 isAuthorizedRequest:true,
                 completion: completion)
     }

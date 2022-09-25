@@ -45,6 +45,9 @@ class Home: UIViewController{
     }
   
     
+    @IBAction func openOffers(_ sender: Any) {
+        
+    }
     
     private func loadCategories(){
         categoriesIndecator.customIndicator(start: true)

@@ -37,6 +37,7 @@ enum Route {
     case updateProfile
     case getCashPoints
     case forgetPassword
+    case offers
     var description: String {
         switch self {
         case .fetchAllCategories:
@@ -80,7 +81,7 @@ enum Route {
         case .currentOrders:
             return "/api/common/Orders/currentuser"
         case .search:
-            return "/api/stores/Search"
+            return "/api/Stores/ProductsFilter"
         case .orderDetails:
             return "/api/storeOrders/Details"
         case .complaints:
@@ -95,6 +96,8 @@ enum Route {
             return "/api/storeOrders/GEtCashPoint"
         case .forgetPassword:
             return "/api/Account/ForgotPassword"
+        case .offers:
+            return "/api/products/Offers"
         }
     }
 }

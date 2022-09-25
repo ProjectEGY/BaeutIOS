@@ -83,8 +83,7 @@ class SubCategoryVC: UIViewController {
         segment.reloadData()
         segment.performBatchUpdates(nil, completion:{ [self] (res) in
             if res{
-                let selectedIndex = self.segment.indexPathsForVisibleItems[indexPath]
-                self.segment.selectItem(at: selectedIndex, animated: true, scrollPosition: [])
+                self.segment.selectItem(at: IndexPath(row: indexPath, section: 0), animated: true, scrollPosition: [])
                 guard let id = allCategories[indexPath].id else {return}
                 self.loadStoresUsingCategoryId(categoryId:id)
             }

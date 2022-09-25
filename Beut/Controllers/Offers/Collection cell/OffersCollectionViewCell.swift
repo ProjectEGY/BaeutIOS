@@ -1,15 +1,15 @@
 //
-//  StoreSubCategoryCollectionViewCell.swift
+//  OffersCollectionViewCell.swift
 //  Beut
 //
-//  Created by ProjectEgy on 22/09/2022.
+//  Created by ProjectEgy on 25/09/2022.
 //
 
 import UIKit
 import Kingfisher
-class StoreSubCategoryCollectionViewCell: UICollectionViewCell {
-    
-    static let identifier = String(describing: StoreSubCategoryCollectionViewCell.self)
+class OffersCollectionViewCell: UICollectionViewCell {
+
+    static let identifier = String(describing: OffersCollectionViewCell.self)
 
     @IBOutlet weak var addToBasketBtn: UIButton!
     @IBOutlet weak var minusBtn: UIButton!
@@ -18,14 +18,16 @@ class StoreSubCategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var details: UILabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var storeName: UILabel!
+    @IBOutlet weak var offerPrice: UILabel!
     @IBOutlet weak var img: UIImageView!
-    
     var quantityValue = 1
     override func awakeFromNib() {
+        self.quantity.text = "\(self.quantityValue)"
         super.awakeFromNib()
-        self.quantity.text = "\(quantityValue)"
+        // Initialization code
     }
-
+    
     func setUpProduct(product:ProductModel){
         if let image = product.images{
             let url = "\(Route.baseUrl)\(image[0])"
@@ -41,5 +43,12 @@ class StoreSubCategoryCollectionViewCell: UICollectionViewCell {
         if let desc = product.description{
             self.details.text = desc
         }
+        if let storeName = product.storeName{
+            self.storeName.text = storeName
+        }
+        if let offerPrice = product.singleOfferPrice{
+            self.offerPrice.text = "\(offerPrice)"
+        }
     }
+
 }
