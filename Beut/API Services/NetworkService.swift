@@ -173,6 +173,11 @@ struct NetworkService {
                 completion: completion)
     }
     
+    func getContactInfo(parameters: JSON?, completion: @escaping(Result<GeneralResponse<AboutInfo>, Error>) -> Void){
+        request(route: .contactUs, method: .get,parameters: parameters,
+                isAuthorizedRequest:true,
+                completion: completion)
+    }
     
     /// This function helps us to send request to the server
     /// - Parameters:

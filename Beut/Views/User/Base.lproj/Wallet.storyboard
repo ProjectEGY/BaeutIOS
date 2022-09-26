@@ -13,28 +13,47 @@
         <!--Wallet View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="WalletViewController" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="WalletViewController" customModule="Beut" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83W-LP-HlV">
-                                <rect key="frame" x="46" y="150" width="322" height="36"/>
-                                <color key="backgroundColor" name="EsfenjaColor"/>
+                                <rect key="frame" x="46" y="70" width="322" height="36"/>
+                                <color key="backgroundColor" name="MainColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Current Charge">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nD-rm-HHP">
-                                <rect key="frame" x="46" y="184" width="322" height="315"/>
+                                <rect key="frame" x="46" y="104" width="322" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHY-aX-aYu">
+                            <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHY-aX-aYu">
                                 <rect key="frame" x="46" y="569" width="322" height="52"/>
                                 <color key="backgroundColor" name="EsfenjaColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -57,11 +76,11 @@
                             <constraint firstItem="mHY-aX-aYu" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="3pY-Uh-niq"/>
                             <constraint firstItem="8nD-rm-HHP" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.777778" id="DKM-ZZ-dva"/>
                             <constraint firstItem="8nD-rm-HHP" firstAttribute="top" secondItem="83W-LP-HlV" secondAttribute="bottom" constant="-2" id="Fkf-RL-EfO"/>
-                            <constraint firstItem="mHY-aX-aYu" firstAttribute="top" secondItem="8nD-rm-HHP" secondAttribute="bottom" constant="70" id="HaO-zT-LUZ"/>
+                            <constraint firstItem="mHY-aX-aYu" firstAttribute="top" secondItem="8nD-rm-HHP" secondAttribute="bottom" constant="-43" id="HaO-zT-LUZ"/>
                             <constraint firstItem="mHY-aX-aYu" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.777778" id="I0S-7h-32H"/>
                             <constraint firstItem="83W-LP-HlV" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.777778" id="SYf-G4-CUb"/>
-                            <constraint firstItem="8nD-rm-HHP" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.351562" id="WNa-g4-k4U"/>
-                            <constraint firstItem="83W-LP-HlV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="106" id="Z6N-vN-wTk"/>
+                            <constraint firstItem="8nD-rm-HHP" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.351562" constant="193.00044800000001" id="WNa-g4-k4U"/>
+                            <constraint firstItem="83W-LP-HlV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="26" id="Z6N-vN-wTk"/>
                             <constraint firstItem="83W-LP-HlV" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="eiM-aV-0oe"/>
                             <constraint firstItem="mHY-aX-aYu" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0580357" id="fKU-UH-GmY"/>
                             <constraint firstItem="83W-LP-HlV" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0401786" id="hMr-Bi-BEm"/>
@@ -80,6 +99,9 @@
     <resources>
         <namedColor name="EsfenjaColor">
             <color red="0.11100000143051147" green="0.29300001263618469" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainColor">
+            <color red="0.097000002861022949" green="0.1679999977350235" blue="0.31099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

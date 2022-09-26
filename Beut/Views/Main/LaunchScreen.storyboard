@@ -17,29 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Zlj-bc-4gu">
-                                <rect key="frame" x="44" y="285" width="326" height="326"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Zlj-bc-4gu">
+                                <rect key="frame" x="44" y="285" width="326" height="291"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="326" id="4VU-w4-aYd"/>
-                                    <constraint firstAttribute="height" constant="326" id="g1P-ta-mDS"/>
+                                    <constraint firstAttribute="height" constant="291" id="g1P-ta-mDS"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="MainColor"/>
                         <constraints>
-                            <constraint firstItem="Zlj-bc-4gu" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="LgR-Kb-K9y"/>
+                            <constraint firstItem="Zlj-bc-4gu" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-17.5" id="LgR-Kb-K9y"/>
                             <constraint firstItem="Zlj-bc-4gu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mng-Sf-ILN"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="51" y="294"/>
+            <point key="canvasLocation" x="50.724637681159422" y="293.97321428571428"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="1024" height="2080"/>
+        <image name="mainlogo" width="341" height="341.5"/>
         <namedColor name="MainColor">
             <color red="0.097000002861022949" green="0.1679999977350235" blue="0.31099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

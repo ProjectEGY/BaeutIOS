@@ -17,6 +17,15 @@
 /* Class = "UILabel"; text = "Total"; ObjectID = "5Nb-8O-3By"; */
 "5Nb-8O-3By.text" = "Total";
 
+/* Class = "UILabel"; text = "Wallet"; ObjectID = "gdf-Kn-xVq"; */
+"gdf-Kn-xVq.text" = "المحفظة";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "LFu-Qe-9qV"; */
+"LFu-Qe-9qV.text" = "الإشعارات";
+
+/* Class = "UILabel"; text = "Order any thing"; ObjectID = "ta3-aw-8yG"; */
+"ta3-aw-8yG.text" = "طلب خاص";
+
 /* Class = "UITextField"; placeholder = "Points"; ObjectID = "68L-3J-JQW"; */
 "68L-3J-JQW.placeholder" = "نقطة";
 

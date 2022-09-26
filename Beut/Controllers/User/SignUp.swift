@@ -39,7 +39,7 @@ class SignUpViewController: UIViewController {
         title = "CreateAccount".localized
         super.viewDidLoad()
         self.imagePicker.allowsEditing = true
-        userImage.makeImageCircular(anyImage:userImage.image!)
+//        userImage.makeImageCircular(anyImage:userImage.image!)
         self.name.handleArabicLanguage()
         self.phoneNumber.handleArabicLanguage()
         self.password.handleArabicLanguage()

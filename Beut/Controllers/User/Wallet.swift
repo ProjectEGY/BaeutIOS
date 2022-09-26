@@ -17,7 +17,7 @@ class WalletViewController: UIViewController {
         title = "Wallet".localized
 
         if let result = UserDefaults.standard.readUserInfoFromoUserDefaults(key:"userAccountInfo"){
-            wallet.text = "\(result.wallet!) SAR"
+            wallet.text = "\(result.wallet!) " + "JOD".localized
         }
         else{
             wallet.text = "Log in to see your wallet"

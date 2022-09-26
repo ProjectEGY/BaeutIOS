@@ -38,6 +38,7 @@ enum Route {
     case getCashPoints
     case forgetPassword
     case offers
+    case contactUs
     var description: String {
         switch self {
         case .fetchAllCategories:
@@ -98,6 +99,8 @@ enum Route {
             return "/api/Account/ForgotPassword"
         case .offers:
             return "/api/products/Offers"
+        case .contactUs:
+            return "/api/company/about"
         }
     }
 }

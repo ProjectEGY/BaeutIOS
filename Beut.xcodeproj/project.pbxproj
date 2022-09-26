@@ -56,6 +56,7 @@
 		345E1F42286C87F400A88ED9 /* categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E1F41286C87F400A88ED9 /* categories.swift */; };
 		345F4C5A28E06413007E963F /* OffersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345F4C5928E06413007E963F /* OffersVC.swift */; };
 		345F4C5E28E06747007E963F /* OffersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345F4C5C28E06747007E963F /* OffersCollectionViewCell.swift */; };
+		346A26BC28E1E1F100975F5A /* about.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A26BB28E1E1F100975F5A /* about.swift */; };
 		346F9AB22882137F008BDD87 /* BasketV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346F9AB12882137F008BDD87 /* BasketV.swift */; };
 		346F9AB4288215EA008BDD87 /* Indicators_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346F9AB3288215EA008BDD87 /* Indicators_Extensions.swift */; };
 		3474B9432865F73100295A7A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474B9422865F73100295A7A /* Home.swift */; };
@@ -66,7 +67,6 @@
 		3478F10828C4B8D800AC9399 /* Tajawal-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3478F10628C4B8D800AC9399 /* Tajawal-Light.otf */; };
 		3478F10928C4B8D800AC9399 /* Tajawal-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3478F10728C4B8D800AC9399 /* Tajawal-Medium.otf */; };
 		347E331228AD449600B0DF61 /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347E331128AD449600B0DF61 /* ForgetPassword.swift */; };
-		347E331528AD45B000B0DF61 /* Forget_Password.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347E331728AD45B000B0DF61 /* Forget_Password.storyboard */; };
 		3480EC6528B76ACF00E8BEF6 /* OnlinePaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480EC6428B76ACF00E8BEF6 /* OnlinePaymentVC.swift */; };
 		34849E7628DB108800C5265A /* SubCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34849E7528DB108800C5265A /* SubCategory.storyboard */; };
 		34849E7928DB10CA00C5265A /* SubCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34849E7828DB10CA00C5265A /* SubCategoryVC.swift */; };
@@ -210,6 +210,7 @@
 		345E1F41286C87F400A88ED9 /* categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categories.swift; sourceTree = "<group>"; };
 		345F4C5928E06413007E963F /* OffersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersVC.swift; sourceTree = "<group>"; };
 		345F4C5C28E06747007E963F /* OffersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCollectionViewCell.swift; sourceTree = "<group>"; };
+		346A26BB28E1E1F100975F5A /* about.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
 		346F9AB12882137F008BDD87 /* BasketV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketV.swift; sourceTree = "<group>"; };
 		346F9AB3288215EA008BDD87 /* Indicators_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicators_Extensions.swift; sourceTree = "<group>"; };
 		3474B9422865F73100295A7A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -220,9 +221,6 @@
 		3478F10628C4B8D800AC9399 /* Tajawal-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Light.otf"; sourceTree = "<group>"; };
 		3478F10728C4B8D800AC9399 /* Tajawal-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium.otf"; sourceTree = "<group>"; };
 		347E331128AD449600B0DF61 /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
-		347E331628AD45B000B0DF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Forget_Password.storyboard; sourceTree = "<group>"; };
-		347E331928AD45B200B0DF61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Forget_Password.strings; sourceTree = "<group>"; };
-		347E331B28AD45B400B0DF61 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Forget_Password.strings; sourceTree = "<group>"; };
 		3480EC6428B76ACF00E8BEF6 /* OnlinePaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlinePaymentVC.swift; sourceTree = "<group>"; };
 		34849E7528DB108800C5265A /* SubCategory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubCategory.storyboard; sourceTree = "<group>"; };
 		34849E7828DB10CA00C5265A /* SubCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryVC.swift; sourceTree = "<group>"; };
@@ -485,6 +483,7 @@
 				34E08E8A28902198005D823B /* order_details.swift */,
 				34E08EA428915D7F005D823B /* change_area.swift */,
 				34E08EAB2891A143005D823B /* notifications.swift */,
+				346A26BB28E1E1F100975F5A /* about.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -639,7 +638,6 @@
 				34919B8828AA55F6009E328A /* Wallet.storyboard */,
 				3445B7F728A27F3900EEC9ED /* ChangeCity.storyboard */,
 				34F1161428A138180083789D /* TermsAndConditions.storyboard */,
-				347E331728AD45B000B0DF61 /* Forget_Password.storyboard */,
 				3458E57A28B7927500757D5D /* UserAccountVC.swift */,
 				3406E76928DCBB0C00CE9648 /* CustomOrder.storyboard */,
 			);
@@ -900,7 +898,6 @@
 				3445B7DA28A26BC500EEC9ED /* SignIn.storyboard in Resources */,
 				3474B94A2866249700295A7A /* Notifications.storyboard in Resources */,
 				345C86DE28634E7A00304813 /* LaunchScreen.storyboard in Resources */,
-				347E331528AD45B000B0DF61 /* Forget_Password.storyboard in Resources */,
 				34F1161528A138180083789D /* TermsAndConditions.storyboard in Resources */,
 				3478F10928C4B8D800AC9399 /* Tajawal-Medium.otf in Resources */,
 				3445B7EB28A27E9200EEC9ED /* Complaints.storyboard in Resources */,
@@ -1057,6 +1054,7 @@
 				34E08E8B28902198005D823B /* order_details.swift in Sources */,
 				345DD8562863C18000C103AB /* OnBoarding.swift in Sources */,
 				340E25562869A59100D09FB9 /* UpdateProfile.swift in Sources */,
+				346A26BC28E1E1F100975F5A /* about.swift in Sources */,
 				3474B9432865F73100295A7A /* Home.swift in Sources */,
 				341F05AA28B2484E00058A21 /* LocationManger.swift in Sources */,
 				345DD8502863A73F00C103AB /* UIView_Extensions.swift in Sources */,
@@ -1226,16 +1224,6 @@
 				3445B82728A2887F00EEC9ED /* ar */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		347E331728AD45B000B0DF61 /* Forget_Password.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				347E331628AD45B000B0DF61 /* Base */,
-				347E331928AD45B200B0DF61 /* en */,
-				347E331B28AD45B400B0DF61 /* ar */,
-			);
-			name = Forget_Password.storyboard;
 			sourceTree = "<group>";
 		};
 		34919B8828AA55F6009E328A /* Wallet.storyboard */ = {

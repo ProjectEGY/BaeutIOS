@@ -13,71 +13,78 @@
         <!--Complaints View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ComplaintsViewController" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ComplaintsViewController" customModule="Beut" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ESFENJA" translatesAutoresizingMaskIntoConstraints="NO" id="WdP-2U-7Xx">
-                                <rect key="frame" x="44" y="151" width="326" height="196"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFn-9Q-LZg">
                                 <rect key="frame" x="23" y="392" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Write your complaint here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLC-Bd-DMO" customClass="CustomForComplaints" customModule="Esfenja" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Write your complaint here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLC-Bd-DMO" customClass="CustomForComplaints" customModule="Beut" customModuleProvider="target">
                                 <rect key="frame" x="21.5" y="421" width="371" height="192"/>
-                                <color key="backgroundColor" red="0.88578468560000001" green="0.88230657580000005" blue="0.89074206349999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                        <real key="value" value="7"/>
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gO-66-mUi" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="146" y="403" width="122" height="100.5"/>
+                                <rect key="frame" x="146" y="403" width="100" height="100.5"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZK-7R-qRN">
                                 <rect key="frame" x="20" y="657" width="374" height="37"/>
-                                <color key="backgroundColor" name="EsfenjaColor"/>
+                                <color key="backgroundColor" name="MainColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Send">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                        <real key="value" value="7"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendComplaint:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dgK-8w-MAJ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainlogo" translatesAutoresizingMaskIntoConstraints="NO" id="WdP-2U-7Xx">
+                                <rect key="frame" x="0.0" y="71" width="414" height="196"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WdP-2U-7Xx" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.21875" id="1lj-8u-sSZ"/>
                             <constraint firstItem="GLC-Bd-DMO" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.896135" id="6an-L7-gBM"/>
                             <constraint firstItem="EZK-7R-qRN" firstAttribute="centerX" secondItem="GLC-Bd-DMO" secondAttribute="centerX" id="B0M-ir-gFM"/>
                             <constraint firstItem="GLC-Bd-DMO" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.214286" id="C5j-xU-Ewv"/>
                             <constraint firstItem="EZK-7R-qRN" firstAttribute="width" secondItem="GLC-Bd-DMO" secondAttribute="width" multiplier="1.00809" id="DqI-2e-N81"/>
-                            <constraint firstItem="WdP-2U-7Xx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="107" id="QaA-Vg-UDu"/>
-                            <constraint firstItem="sFn-9Q-LZg" firstAttribute="top" secondItem="WdP-2U-7Xx" secondAttribute="bottom" constant="45" id="TF2-o0-viy"/>
+                            <constraint firstItem="WdP-2U-7Xx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="27" id="FXp-N9-Bta"/>
+                            <constraint firstItem="WdP-2U-7Xx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="JOb-2D-Dyi"/>
+                            <constraint firstItem="WdP-2U-7Xx" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.21875" id="UVU-Cf-HkH"/>
                             <constraint firstItem="GLC-Bd-DMO" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="YLf-ox-zn3"/>
                             <constraint firstItem="EZK-7R-qRN" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0412946" id="Yfc-Fs-H1k"/>
                             <constraint firstItem="EZK-7R-qRN" firstAttribute="top" secondItem="GLC-Bd-DMO" secondAttribute="bottom" constant="44" id="a0k-Lf-E40"/>
-                            <constraint firstItem="WdP-2U-7Xx" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.78744" id="brt-4W-cFR"/>
                             <constraint firstItem="sFn-9Q-LZg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="23" id="c7o-q7-vg8"/>
-                            <constraint firstItem="4gO-66-mUi" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.294686" id="cHq-lM-ZNU"/>
+                            <constraint firstItem="4gO-66-mUi" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.294686" constant="-22.000004000000004" id="cHq-lM-ZNU"/>
                             <constraint firstItem="sFn-9Q-LZg" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0234375" id="dqw-z6-IFn"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WdP-2U-7Xx" secondAttribute="trailing" constant="44" id="i1H-GV-yFe"/>
+                            <constraint firstItem="WdP-2U-7Xx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hDp-Lf-7YV"/>
+                            <constraint firstItem="sFn-9Q-LZg" firstAttribute="top" secondItem="WdP-2U-7Xx" secondAttribute="bottom" constant="125" id="nDP-BO-tkh"/>
                             <constraint firstItem="sFn-9Q-LZg" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.277778" id="nYY-lj-xE0"/>
-                            <constraint firstItem="4gO-66-mUi" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="oVi-6T-hlu"/>
+                            <constraint firstItem="4gO-66-mUi" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" constant="-11" id="oVi-6T-hlu"/>
                             <constraint firstItem="4gO-66-mUi" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.112165" id="uyD-9U-d6v"/>
                             <constraint firstItem="GLC-Bd-DMO" firstAttribute="top" secondItem="sFn-9Q-LZg" secondAttribute="bottom" constant="8" symbolic="YES" id="v0O-yi-BE5"/>
                             <constraint firstItem="4gO-66-mUi" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="zd0-nV-808"/>
@@ -94,9 +101,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ESFENJA" width="326" height="326"/>
-        <namedColor name="EsfenjaColor">
-            <color red="0.11100000143051147" green="0.29300001263618469" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="mainlogo" width="341" height="341.5"/>
+        <namedColor name="MainColor">
+            <color red="0.097000002861022949" green="0.1679999977350235" blue="0.31099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

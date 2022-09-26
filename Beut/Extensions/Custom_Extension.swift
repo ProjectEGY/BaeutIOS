@@ -20,12 +20,12 @@ class CustomForComplaints: UITextField{
         return CGRect(x: bounds.origin.x + 15, y: bounds.origin.y + 15, width: bounds.width, height: bounds.height)
     }
 
-override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-    if Locale.current.languageCode == "ar"{
-        return CGRect(x: bounds.origin.x - 15, y: bounds.origin.y + 15, width: bounds.width, height: bounds.height)
-    }
-    return CGRect(x: bounds.origin.x + 15, y: bounds.origin.y + 15, width: bounds.width, height: bounds.height)
-}
+//override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+//    if Locale.current.languageCode == "ar"{
+//        return CGRect(x: bounds.origin.x - 15, y: bounds.origin.y + 15, width: bounds.width, height: bounds.height)
+//    }
+//    return CGRect(x: bounds.origin.x + 15, y: bounds.origin.y + 15, width: bounds.width, height: bounds.height)
+//}
 }
 class Custom: UITextField {
    

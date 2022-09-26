@@ -42,7 +42,7 @@
 "g0H-bp-eRi.placeholder" = "Confirm Password";
 
 /* Class = "UILabel"; text = "Don't have an account? Sign Up"; ObjectID = "ghF-BE-gqd"; */
-"ghF-BE-gqd.text" = "Don't have an account? Sign Up";
+"ghF-BE-gqd.text" = "Create an account";
 
 /* Class = "UILabel"; text = "Sign in to continue"; ObjectID = "pVG-g9-5ka"; */
 "pVG-g9-5ka.text" = "Sign in to continue";

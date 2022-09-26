@@ -46,8 +46,11 @@ class Home: UIViewController{
   
     
     @IBAction func openOffers(_ sender: Any) {
-        
+        self.tabBarController?.selectedIndex = 1
     }
+    
+
+    
     
     private func loadCategories(){
         categoriesIndecator.customIndicator(start: true)

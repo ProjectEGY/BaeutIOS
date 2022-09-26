@@ -7,15 +7,21 @@
 
 import UIKit
 import NVActivityIndicatorView
-
+import AARatingBar
 import CoreLocation
+import Kingfisher
 @available(iOS 13.0, *)
 class BasketViewController: UIViewController, UITabBarControllerDelegate {
 
+    //Store View
+    @IBOutlet weak var storeRate: AARatingBar!
+    @IBOutlet weak var storeName: UILabel!
+    @IBOutlet weak var storeSeenCount: UILabel!
+    @IBOutlet weak var storeImage: UIImageView!
     
+    @IBOutlet weak var storeDescription: UILabel!
     @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var pointsInfo: UILabel!
-    @IBOutlet weak var userPointsTextField: Custom!
+    @IBOutlet weak var notes: CustomForComplaints!
     @IBOutlet weak var orderButton: UIButton!
     @IBOutlet weak var emptyCardView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -56,6 +62,10 @@ class BasketViewController: UIViewController, UITabBarControllerDelegate {
     @IBOutlet weak var basketItemsTableView: UITableView!
     @IBOutlet weak var bsketIndicator: NVActivityIndicatorView!
     override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Basket".localized
+        basketItemsTableView.register(UINib(nibName: BasketItemTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: BasketItemTableViewCell.identifier)
+        self.loadBasket()
         
         if LocalizationManager.shared.getLanguage() == .Arabic{
             backButton.image = UIImage(named: "back_arrow_arabic")
@@ -72,21 +82,27 @@ class BasketViewController: UIViewController, UITabBarControllerDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setUpViewConfigurations()
     }
     /// set up initial configurations
-        private func setUpViewConfigurations(){
-        cashRadioButton.image = UIImage(named: "selected")
-        orderNowRadioButton.image = UIImage(named: "selected")
-        isOrderNow = true
-        isCash = true
-        super.viewDidLoad()
-        title = "Basket".localized
-        setUpEmptyCard(isEmpty: true)
-        self.loadBasket()
-        basketItemsTableView.register(UINib(nibName: BasketItemTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: BasketItemTableViewCell.identifier)
-        isCredit = false
-        isWallet = false
+    private func setUpViewConfigurations(){
+            creditCardRadioButton.image = UIImage(named: "selected")
+            cashRadioButton.image = UIImage(named: "circle")
+            walletRadioButton.image = UIImage(named: "circle")
+            
+            isCredit = true
+            isWallet = false
+            isCash = false
+            
+            orderNowRadioButton.image = UIImage(named: "selected")
+            orderLaterRadioButton.image = UIImage(named: "circle")
+            
+            isOrderNow = true
+            isOrderLater = false
+            
+            setUpEmptyCard(isEmpty: true)
+            self.loadBasket()
     }
     
     
@@ -94,33 +110,33 @@ class BasketViewController: UIViewController, UITabBarControllerDelegate {
         self.dismiss(animated: true, completion: nil)
         BasketViewController.enabled = false
     }
-    @IBAction func applyPoints(_ sender: Any) {
-        if let points = userPointsTextField.text{
-            
-            if points == ""{
-                self.showInofToUser(message: "Enter point value")
-            }else{
-                self.bsketIndicator.customIndicator(start: true, type: .ballTrianglePath)
-                self.makeViewInVisible(wannaMakeItVisible: true)
-                NetworkService.shared.getCashPoints(parameters: ["point":points] as [String:Any]){
-                    [weak self] (result) in
-                    switch result{
-                    case .success(let data):
-                        self?.pointsInfo.isHidden = false
-                        self?.pointsInfo.text = data.data!
-                        self?.bsketIndicator.customIndicator(start: false)
-                        self?.makeViewInVisible(wannaMakeItVisible: false)
-                        
-                    case .failure(let error):
-                        self?.bsketIndicator.customIndicator(start: false)
-                        self?.makeViewInVisible(wannaMakeItVisible: false)
-                        self?.showInofToUser(title: "Error", message: error.localizedDescription)
-                    }
-                }
-            }
-        }
-      
-    }
+//    @IBAction func applyPoints(_ sender: Any) {
+//        if let points = userPointsTextField.text{
+//
+//            if points == ""{
+//                self.showInofToUser(message: "Enter point value")
+//            }else{
+//                self.bsketIndicator.customIndicator(start: true, type: .ballTrianglePath)
+//                self.makeViewInVisible(wannaMakeItVisible: true)
+//                NetworkService.shared.getCashPoints(parameters: ["point":points] as [String:Any]){
+//                    [weak self] (result) in
+//                    switch result{
+//                    case .success(let data):
+//                        self?.pointsInfo.isHidden = false
+//                        self?.pointsInfo.text = data.data!
+//                        self?.bsketIndicator.customIndicator(start: false)
+//                        self?.makeViewInVisible(wannaMakeItVisible: false)
+//
+//                    case .failure(let error):
+//                        self?.bsketIndicator.customIndicator(start: false)
+//                        self?.makeViewInVisible(wannaMakeItVisible: false)
+//                        self?.showInofToUser(title: "Error", message: error.localizedDescription)
+//                    }
+//                }
+//            }
+//        }
+//
+//    }
     
     @IBAction func orderLater(_ sender: Any) {
         isOrderNow = false
@@ -188,6 +204,9 @@ class BasketViewController: UIViewController, UITabBarControllerDelegate {
                     "DayMonthYear": "Hmmm",
                     "Time":"TimeHmm",
                     "point":20] as [String:Any]
+        if let notes = self.notes.text, notes != ""{
+            body["Note"] = notes
+        }
 
         if isOrderLater{
             body["DayMonthYear"] = orderLater.date.dateAsString()
@@ -371,8 +390,9 @@ extension BasketViewController{
                 switch result{
                     
                 case .success(let basket):
-                   
+                    
                     if let basket = basket.data{
+                        self?.setUpStoreView(basket: basket)
                         if !basket.customerHasAddress!{
                             self?.addNewAddress()
                             self?.loadBasket()
@@ -409,6 +429,24 @@ extension BasketViewController{
         }
        
      }
+    private func setUpStoreView(basket:Basket){
+        if let storeName = basket.name{
+            self.storeName.text = storeName
+        }
+        if let desc = basket.basketDescription{
+            self.storeDescription.text = desc
+        }else{
+            self.storeDescription.isHidden = true
+        }
+        
+        if let seenCount = basket.seenCount {
+            self.storeSeenCount.text = "\(seenCount)"
+        }
+        if let image = basket.logoImageURL{
+            let url = "\(Route.baseUrl)\(image)"
+            self.storeImage.kf.setImage(with:url.asURL)
+        }
+    }
     /// Increament the amount of a specific item
     /// - Parameter basketItemId: the id of the item we wanna increment
     private func decreaseBasketItem(basketItemId:Int){

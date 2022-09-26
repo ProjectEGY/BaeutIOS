@@ -15,6 +15,7 @@ class OffersVC: UIViewController {
     var offers:[ProductModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Offers"
         getOffers()
     }
     

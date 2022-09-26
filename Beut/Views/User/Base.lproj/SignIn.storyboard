@@ -13,13 +13,14 @@
         <!--LogIn-->
         <scene sceneID="YvL-Li-6KJ">
             <objects>
-                <viewController storyboardIdentifier="SignIn2" title="LogIn" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="e5G-hs-N3k" customClass="LogInViewController" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignIn2" title="LogIn" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="e5G-hs-N3k" customClass="LogInViewController" customModule="Beut" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BFq-Ps-5iT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cph-uK-qvH" customClass="Custom" customModule="Esfenja" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cph-uK-qvH" customClass="Custom" customModule="Beut" customModuleProvider="target">
                                 <rect key="frame" x="46" y="295" width="322" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
@@ -27,41 +28,50 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <color key="backgroundColor" red="0.83969840620000002" green="0.83969840620000002" blue="0.83969840620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </variation>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm4-gT-oZX" customClass="Custom" customModule="Esfenja" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm4-gT-oZX" customClass="Custom" customModule="Beut" customModuleProvider="target">
                                 <rect key="frame" x="46" y="368" width="322" height="50"/>
-                                <color key="backgroundColor" red="0.83969840620000002" green="0.83969840620000002" blue="0.83969840620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYy-hZ-WzL">
-                                <rect key="frame" x="45.5" y="476" width="323" height="56"/>
-                                <color key="backgroundColor" name="EsfenjaColor"/>
-                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                                <rect key="frame" x="109" y="446" width="196" height="56"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                        <real key="value" value="7"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="login:" destination="e5G-hs-N3k" eventType="touchUpInside" id="DAq-Bo-8bp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghF-BE-gqd">
-                                <rect key="frame" x="20" y="618" width="374" height="24"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghF-BE-gqd">
+                                <rect key="frame" x="74" y="618" width="266" height="24"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -70,9 +80,16 @@
                                     <outletCollection property="gestureRecognizers" destination="neE-6v-yQr" appends="YES" id="KRO-Yd-FOF"/>
                                 </connections>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhR-ts-ehu" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="146" y="398" width="122" height="100.5"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainlogo" translatesAutoresizingMaskIntoConstraints="NO" id="9yI-zk-nMY">
+                                <rect key="frame" x="92" y="133" width="230" height="128"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                            </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gp-JX-KsL">
-                                <rect key="frame" x="209" y="426" width="151" height="23"/>
-                                <color key="backgroundColor" red="0.93686133620000001" green="0.93312960860000005" blue="0.9502438903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="131.5" y="549" width="151" height="23"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
@@ -81,45 +98,38 @@
                                     <outletCollection property="gestureRecognizers" destination="IYd-wS-vSR" appends="YES" id="aGA-Jl-nd2"/>
                                 </connections>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhR-ts-ehu" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="146" y="398" width="122" height="100.5"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVG-g9-5ka">
-                                <rect key="frame" x="46" y="245" width="247" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TtI-1n-oU3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cYy-hZ-WzL" firstAttribute="top" secondItem="4gp-JX-KsL" secondAttribute="bottom" constant="27" id="2ov-fJ-LIX"/>
-                            <constraint firstItem="TtI-1n-oU3" firstAttribute="trailing" secondItem="4gp-JX-KsL" secondAttribute="trailing" constant="54" id="ClO-9M-ygT"/>
-                            <constraint firstItem="cph-uK-qvH" firstAttribute="top" secondItem="pVG-g9-5ka" secondAttribute="bottom" constant="29" id="E4D-YC-CAq"/>
-                            <constraint firstItem="cYy-hZ-WzL" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0625" id="F4k-qt-Y8b"/>
-                            <constraint firstItem="pVG-g9-5ka" firstAttribute="leading" secondItem="TtI-1n-oU3" secondAttribute="leading" constant="46" id="GsY-H3-jL8"/>
+                            <constraint firstItem="9yI-zk-nMY" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.142857" id="04T-7T-0NE"/>
+                            <constraint firstItem="cYy-hZ-WzL" firstAttribute="top" secondItem="Cm4-gT-oZX" secondAttribute="bottom" constant="28" id="0iZ-I0-NSX"/>
+                            <constraint firstItem="9yI-zk-nMY" firstAttribute="centerX" secondItem="TtI-1n-oU3" secondAttribute="centerX" id="2i5-Sw-I4h"/>
+                            <constraint firstItem="9yI-zk-nMY" firstAttribute="top" secondItem="TtI-1n-oU3" secondAttribute="top" constant="45" id="7rk-Pn-bYd"/>
+                            <constraint firstItem="cYy-hZ-WzL" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0625" id="8Vl-u7-xBz"/>
+                            <constraint firstItem="4gp-JX-KsL" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.364734" id="8ag-1y-iyK"/>
+                            <constraint firstItem="ghF-BE-gqd" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0267857" id="DKF-eK-8Rq"/>
+                            <constraint firstItem="cYy-hZ-WzL" firstAttribute="centerX" secondItem="TtI-1n-oU3" secondAttribute="centerX" id="EU4-1c-4tg"/>
+                            <constraint firstItem="cph-uK-qvH" firstAttribute="top" secondItem="9yI-zk-nMY" secondAttribute="bottom" constant="34" id="Ebt-Tw-kej"/>
                             <constraint firstItem="Cm4-gT-oZX" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.777778" id="INF-QM-5f5"/>
-                            <constraint firstItem="4gp-JX-KsL" firstAttribute="top" secondItem="Cm4-gT-oZX" secondAttribute="bottom" constant="8" id="JwW-ac-uK4"/>
                             <constraint firstItem="uhR-ts-ehu" firstAttribute="centerY" secondItem="BFq-Ps-5iT" secondAttribute="centerY" id="KQz-er-FyW"/>
                             <constraint firstItem="Cm4-gT-oZX" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0379464" constant="16.000025600000001" id="LW8-p4-4jj"/>
-                            <constraint firstItem="ghF-BE-gqd" firstAttribute="top" secondItem="cYy-hZ-WzL" secondAttribute="bottom" constant="86" id="Ld7-vE-nHe"/>
+                            <constraint firstItem="ghF-BE-gqd" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.642512" id="SIl-nH-dHa"/>
                             <constraint firstItem="cph-uK-qvH" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.777778" id="Thg-ga-nUA"/>
+                            <constraint firstItem="ghF-BE-gqd" firstAttribute="centerX" secondItem="TtI-1n-oU3" secondAttribute="centerX" id="VEU-tO-UsQ"/>
+                            <constraint firstItem="cYy-hZ-WzL" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.47343" id="YWs-Jz-zzP"/>
                             <constraint firstItem="uhR-ts-ehu" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.294686" id="Zyb-tt-XDP"/>
-                            <constraint firstItem="ghF-BE-gqd" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0267857" id="bhC-JT-vYW"/>
-                            <constraint firstItem="cYy-hZ-WzL" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.780193" id="cPk-If-Opu"/>
-                            <constraint firstItem="pVG-g9-5ka" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0234375" id="ccA-Wt-pBe"/>
-                            <constraint firstItem="pVG-g9-5ka" firstAttribute="top" secondItem="TtI-1n-oU3" secondAttribute="top" constant="157" id="f7b-Zg-kMh"/>
                             <constraint firstItem="cph-uK-qvH" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0379464" constant="16.000025600000001" id="gPc-u6-yIW"/>
-                            <constraint firstItem="pVG-g9-5ka" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.342995" constant="105" id="hCM-SH-6u4"/>
+                            <constraint firstItem="ghF-BE-gqd" firstAttribute="top" secondItem="4gp-JX-KsL" secondAttribute="bottom" constant="46" id="iUF-sR-25T"/>
                             <constraint firstItem="Cm4-gT-oZX" firstAttribute="top" secondItem="cph-uK-qvH" secondAttribute="bottom" constant="23" id="nKs-96-NuW"/>
-                            <constraint firstItem="ghF-BE-gqd" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.675121" constant="94.5" id="qXv-FM-10b"/>
+                            <constraint firstItem="4gp-JX-KsL" firstAttribute="top" secondItem="uhR-ts-ehu" secondAttribute="bottom" constant="50.5" id="nPT-8x-dAk"/>
+                            <constraint firstItem="4gp-JX-KsL" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0256696" id="qr5-NK-fcX"/>
+                            <constraint firstItem="9yI-zk-nMY" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.555556" id="tCk-xt-2Jt"/>
                             <constraint firstItem="Cm4-gT-oZX" firstAttribute="centerX" secondItem="TtI-1n-oU3" secondAttribute="centerX" id="uUW-8i-eUm"/>
                             <constraint firstItem="uhR-ts-ehu" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.112165" id="usI-xI-o5g"/>
                             <constraint firstItem="cph-uK-qvH" firstAttribute="centerX" secondItem="TtI-1n-oU3" secondAttribute="centerX" id="vwB-Hc-E8K"/>
+                            <constraint firstItem="4gp-JX-KsL" firstAttribute="centerX" secondItem="TtI-1n-oU3" secondAttribute="centerX" id="xPP-E7-cos"/>
                             <constraint firstItem="uhR-ts-ehu" firstAttribute="centerX" secondItem="BFq-Ps-5iT" secondAttribute="centerX" id="yKe-Er-Dfb"/>
-                            <constraint firstItem="cYy-hZ-WzL" firstAttribute="centerX" secondItem="TtI-1n-oU3" secondAttribute="centerX" id="ywc-Cq-ckP"/>
-                            <constraint firstItem="ghF-BE-gqd" firstAttribute="centerX" secondItem="cYy-hZ-WzL" secondAttribute="centerX" id="zth-pV-FPb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7SL-2p-NCv">
@@ -144,12 +154,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-6119" y="-1098"/>
+            <point key="canvasLocation" x="-6120.289855072464" y="-1098.2142857142856"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="NIF-CZ-0Jv">
             <objects>
-                <viewController storyboardIdentifier="SignUpID" title="Sign Up" modalPresentationStyle="fullScreen" id="dzM-6l-89V" customClass="SignUpViewController" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpID" title="Sign Up" modalPresentationStyle="fullScreen" id="dzM-6l-89V" customClass="SignUpViewController" customModule="Beut" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RnU-CL-3Dq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,7 +180,7 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UI-mR-gIH">
                                                 <rect key="frame" x="30" y="533" width="354" height="56"/>
-                                                <color key="backgroundColor" name="EsfenjaColor"/>
+                                                <color key="backgroundColor" name="MainColor"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -186,8 +196,9 @@
                                                     <action selector="signUp:" destination="dzM-6l-89V" eventType="touchUpInside" id="eUv-fr-0z5"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GVR-rB-u0i" customClass="Custom" customModule="Esfenja" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GVR-rB-u0i" customClass="Custom" customModule="Beut" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="195" width="354" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -195,13 +206,17 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
                                                         <real key="value" value="7"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <variation key="heightClass=regular-widthClass=compact">
-                                                    <color key="backgroundColor" red="0.83969840620000002" green="0.83969840620000002" blue="0.83969840620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </variation>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="L9T-U6-sm3" userLabel="phone number" customClass="Custom" customModule="Esfenja" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="L9T-U6-sm3" userLabel="phone number" customClass="Custom" customModule="Beut" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="263" width="354" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
@@ -209,13 +224,17 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
                                                         <real key="value" value="7"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <variation key="heightClass=regular-widthClass=compact">
-                                                    <color key="backgroundColor" red="0.83969840620000002" green="0.83969840620000002" blue="0.83969840620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </variation>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CAW-8D-LIn" customClass="Custom" customModule="Esfenja" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CAW-8D-LIn" customClass="Custom" customModule="Beut" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="334" width="354" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
@@ -223,13 +242,17 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
                                                         <real key="value" value="7"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <variation key="heightClass=regular-widthClass=compact">
-                                                    <color key="backgroundColor" red="0.83969840620000002" green="0.83969840620000002" blue="0.83969840620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </variation>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="g0H-bp-eRi" customClass="Custom" customModule="Esfenja" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="g0H-bp-eRi" customClass="Custom" customModule="Beut" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="406" width="354" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES"/>
@@ -237,10 +260,13 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
                                                         <real key="value" value="7"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <variation key="heightClass=regular-widthClass=compact">
-                                                    <color key="backgroundColor" red="0.83969840620000002" green="0.83969840620000002" blue="0.83969840620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </variation>
                                             </textField>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJV-Sy-6ZY" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
                                                 <rect key="frame" x="145.5" y="311" width="123" height="96"/>
@@ -327,7 +353,7 @@
         <!--Forget Password-->
         <scene sceneID="pLd-S2-Vw9">
             <objects>
-                <viewController id="bOc-HV-fTU" customClass="ForgetPassword" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bOc-HV-fTU" customClass="ForgetPassword" customModule="Beut" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GoP-X9-hdt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +367,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6c-r1-CyA" customClass="Custom" customModule="Esfenja" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6c-r1-CyA" customClass="Custom" customModule="Beut" customModuleProvider="target">
                                 <rect key="frame" x="20" y="424" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.93686133620000001" green="0.93312960860000005" blue="0.9502438903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -354,7 +380,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoH-Qz-6j7">
                                 <rect key="frame" x="20" y="509" width="374" height="46"/>
-                                <color key="backgroundColor" name="EsfenjaColor"/>
+                                <color key="backgroundColor" name="MainColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -412,7 +438,7 @@
         <!--Log In Nav Bar View Controller-->
         <scene sceneID="NE9-xB-cey">
             <objects>
-                <navigationController storyboardIdentifier="SignIn" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="NGr-gu-4Ga" customClass="LogInNavBarViewController" customModule="Esfenja" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignIn" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="NGr-gu-4Ga" customClass="LogInNavBarViewController" customModule="Beut" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EQ5-0A-oSn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -430,9 +456,10 @@
     </scenes>
     <resources>
         <image name="avatar" width="666.5" height="666.5"/>
+        <image name="mainlogo" width="341" height="341.5"/>
         <image name="no_data" width="360" height="208.5"/>
-        <namedColor name="EsfenjaColor">
-            <color red="0.11100000143051147" green="0.29300001263618469" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="MainColor">
+            <color red="0.097000002861022949" green="0.1679999977350235" blue="0.31099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
