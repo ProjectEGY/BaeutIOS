@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Tww-l5-8Ko">
-                                <rect key="frame" x="20" y="108" width="374" height="241"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="241"/>
                                 <color key="backgroundColor" name="MainColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Knx-I7-vnT">
@@ -66,10 +66,10 @@
                                 </connections>
                             </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4r5-J5-D74" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="152" y="386" width="110" height="134"/>
+                                <rect key="frame" x="167" y="413" width="80" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSA-gz-QIh">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSA-gz-QIh">
                                 <rect key="frame" x="26" y="381" width="217" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4xw-4a-tMW"/>
@@ -79,7 +79,7 @@
                                 <color key="textColor" name="MainColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2Q-7l-67H">
+                            <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2Q-7l-67H">
                                 <rect key="frame" x="26" y="425" width="217" height="21"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -93,7 +93,7 @@
                                     <outletCollection property="gestureRecognizers" destination="8IL-vm-FaN" appends="YES" id="0hk-Vt-Xhy"/>
                                 </connections>
                             </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjE-k6-shQ">
+                            <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjE-k6-shQ">
                                 <rect key="frame" x="26" y="464" width="217" height="21"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -114,9 +114,11 @@
                             <constraint firstItem="Knx-I7-vnT" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.071964" constant="-16.479743999999997" id="1rL-dh-khM"/>
                             <constraint firstItem="PSA-gz-QIh" firstAttribute="top" secondItem="Tww-l5-8Ko" secondAttribute="bottom" constant="32" id="4bl-JE-5c4"/>
                             <constraint firstItem="Tww-l5-8Ko" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.142857" constant="113.00012799999999" id="55F-yQ-uNs"/>
-                            <constraint firstItem="4r5-J5-D74" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.266667" id="6VH-MA-XDW"/>
-                            <constraint firstItem="Tww-l5-8Ko" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.57971" constant="134.00006000000002" id="7ik-13-VuU"/>
+                            <constraint firstItem="Tww-l5-8Ko" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.57971" constant="174.00006000000002" id="7ik-13-VuU"/>
                             <constraint firstItem="jZe-ll-1sc" firstAttribute="leading" secondItem="82r-ln-BgH" secondAttribute="trailing" constant="39" id="7jJ-Ac-pAz"/>
+                            <constraint firstItem="4r5-J5-D74" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="8gq-bb-NKL"/>
+                            <constraint firstItem="4r5-J5-D74" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="DHC-Ut-ih3"/>
+                            <constraint firstItem="4r5-J5-D74" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0892857" id="E9F-p8-rw1"/>
                             <constraint firstItem="82r-ln-BgH" firstAttribute="leading" secondItem="Knx-I7-vnT" secondAttribute="trailing" constant="32" id="EJW-BU-iM0"/>
                             <constraint firstItem="XjE-k6-shQ" firstAttribute="top" secondItem="w2Q-7l-67H" secondAttribute="bottom" constant="18" id="F8W-rI-j7a"/>
                             <constraint firstItem="82r-ln-BgH" firstAttribute="top" secondItem="Tww-l5-8Ko" secondAttribute="bottom" constant="213" id="JLG-mh-m8N"/>
@@ -125,11 +127,9 @@
                             <constraint firstItem="jZe-ll-1sc" firstAttribute="top" secondItem="Tww-l5-8Ko" secondAttribute="bottom" constant="215" id="N64-U7-DTY"/>
                             <constraint firstItem="XjE-k6-shQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="26" id="ORe-CR-zk7"/>
                             <constraint firstItem="82r-ln-BgH" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.128" constant="-4.9920000000000044" id="PZq-uF-WhD"/>
-                            <constraint firstItem="4r5-J5-D74" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="PsG-U7-w7J"/>
                             <constraint firstItem="Tww-l5-8Ko" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RZN-g5-a3o"/>
                             <constraint firstItem="jZe-ll-1sc" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.071964" constant="-16.479743999999997" id="Uma-FF-Ps4"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wWa-KY-MOd" secondAttribute="trailing" constant="79" id="WTt-56-TMZ"/>
-                            <constraint firstItem="4r5-J5-D74" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="Xfa-et-zd9"/>
                             <constraint firstItem="82r-ln-BgH" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.071964" constant="-16.479743999999997" id="ZF7-C9-TRw"/>
                             <constraint firstItem="Knx-I7-vnT" firstAttribute="top" secondItem="Tww-l5-8Ko" secondAttribute="bottom" constant="215" id="aOQ-gT-7er"/>
                             <constraint firstItem="Knx-I7-vnT" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.128" constant="-4.9920000000000044" id="cA5-K4-ZYJ"/>
@@ -138,7 +138,7 @@
                             <constraint firstItem="Knx-I7-vnT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="fx9-X2-UzV"/>
                             <constraint firstItem="wWa-KY-MOd" firstAttribute="top" secondItem="Tww-l5-8Ko" secondAttribute="bottom" constant="215" id="mSg-IT-abw"/>
                             <constraint firstItem="wWa-KY-MOd" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.071964" constant="-16.479743999999997" id="syS-3F-cK7"/>
-                            <constraint firstItem="4r5-J5-D74" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.149925" id="uDd-AX-wDH"/>
+                            <constraint firstItem="4r5-J5-D74" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.193237" id="uOM-Hw-J5a"/>
                             <constraint firstItem="wWa-KY-MOd" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.128" constant="-4.9920000000000044" id="ycO-I1-zC0"/>
                             <constraint firstItem="PSA-gz-QIh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="26" id="zr3-Xz-hGZ"/>
                         </constraints>

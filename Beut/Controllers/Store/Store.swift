@@ -17,12 +17,11 @@ class Store: UIViewController{
     @IBOutlet weak var storeSeenCount: UILabel!
     @IBOutlet weak var storeRate: AARatingBar!
     @IBOutlet weak var storeLogoImage: UIImageView!
-    
     @IBOutlet weak var storeCategories: UICollectionView!
-    
     
     var storeId:Int?
     var storeCategoriesList :[Categs] = []
+    var myTab = MyTabBarViewController()
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -39,11 +38,12 @@ class Store: UIViewController{
 //    }
     
     @IBAction func openBasket(_ sender: Any) {
+//        myTab.selectedIndex = 2
         let storyBoard : UIStoryboard = UIStoryboard(name: "TabBarNavigator", bundle:nil)
-        BasketViewController.enabled = true
-        let basketView = storyBoard.instantiateViewController(withIdentifier: "BasketNavBar") as! BasketNavBar
-        
-        self.present(basketView, animated:true, completion:nil)
+//        BasketViewController.enabled = true
+        let basketView = storyBoard.instantiateViewController(withIdentifier: "BasketID") as! BasketViewController
+
+        self.navigationController?.pushViewController(basketView, animated: true)
     }
     
     
@@ -91,6 +91,20 @@ class Store: UIViewController{
             storeDescription.text = des
         }else{
             storeDescription.isHidden = true
+        }
+        
+        if let rate = storeDetials.rate{
+            self.storeRate.isUserInteractionEnabled = false
+            if let n = NumberFormatter().number(from: rate) {
+                let num = CGFloat(truncating: n)
+                self.storeRate.value = num
+                if num > 0{
+                    self.storeRate.color = .systemYellow
+                }else{
+                    self.storeRate.color = .gray
+                }
+                
+            }
         }
         
     }

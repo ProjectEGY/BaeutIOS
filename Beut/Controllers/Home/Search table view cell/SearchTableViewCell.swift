@@ -17,14 +17,18 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var offerPrice:UILabel!
     @IBOutlet weak var details:UILabel!
     @IBOutlet weak var quantity:UILabel!
-    @IBOutlet weak var addToBasket:UIButton!
+    @IBOutlet weak var addToBasket:UILabel!
     @IBOutlet weak var plusBtn:UIButton!
     @IBOutlet weak var minusBtn:UIButton!
     var quantityValue = 1
     override func awakeFromNib() {
         self.quantity.text = "\(self.quantityValue)"
         super.awakeFromNib()
-        // Initialization code
+        if #available(iOS 13.0, *) {
+            self.addToBasket.text = "AddToBasket".localized
+        } else {
+            self.addToBasket.text = NSLocalizedString("AddToBasket", comment: "")
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,7 +39,7 @@ class SearchTableViewCell: UITableViewCell {
     
     func setUpSearchResult(result:ProductModel){
         
-        print("ProductIs:\(result)")
+      
         if let image = result.images{
             if image.count > 0{
                 let url = "\(Route.baseUrl)\(image[0])"

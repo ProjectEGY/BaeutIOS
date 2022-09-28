@@ -194,7 +194,14 @@
                             <constraint firstItem="9eG-xa-zlI" firstAttribute="height" secondItem="bM2-sZ-h2x" secondAttribute="height" multiplier="0.0691964" id="nLI-dY-gQ5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qwJ-WC-THg"/>
+                    <navigationItem key="navigationItem" id="qwJ-WC-THg">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="shopping-cart c" id="iPd-V4-QXQ">
+                            <color key="tintColor" name="MainColor"/>
+                            <connections>
+                                <action selector="openBasket:" destination="By5-mr-xMX" id="riR-up-RXy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="storeCategories" destination="jNk-Z0-9b2" id="KCx-E1-1yI"/>
                         <outlet property="storeDescription" destination="BKU-OC-hYp" id="gJS-5m-NES"/>
@@ -217,7 +224,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-4765.217391304348" y="-713.16964285714278"/>
+            <point key="canvasLocation" x="-4630" y="-713"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="adI-zg-ruD">
@@ -239,6 +246,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="shopping-cart c" width="26" height="25"/>
         <image name="views" width="25" height="25"/>
         <namedColor name="MainColor">
             <color red="0.097000002861022949" green="0.1679999977350235" blue="0.31099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

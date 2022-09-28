@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghF-BE-gqd">
-                                <rect key="frame" x="74" y="618" width="266" height="24"/>
+                                <rect key="frame" x="0.0" y="618" width="414" height="24"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -87,8 +87,8 @@
                                 <rect key="frame" x="92" y="133" width="230" height="128"/>
                                 <color key="backgroundColor" name="MainColor"/>
                             </imageView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gp-JX-KsL">
-                                <rect key="frame" x="131.5" y="549" width="151" height="23"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gp-JX-KsL">
+                                <rect key="frame" x="19.5" y="549" width="375" height="23"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -107,14 +107,14 @@
                             <constraint firstItem="9yI-zk-nMY" firstAttribute="centerX" secondItem="TtI-1n-oU3" secondAttribute="centerX" id="2i5-Sw-I4h"/>
                             <constraint firstItem="9yI-zk-nMY" firstAttribute="top" secondItem="TtI-1n-oU3" secondAttribute="top" constant="45" id="7rk-Pn-bYd"/>
                             <constraint firstItem="cYy-hZ-WzL" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0625" id="8Vl-u7-xBz"/>
-                            <constraint firstItem="4gp-JX-KsL" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.364734" id="8ag-1y-iyK"/>
+                            <constraint firstItem="4gp-JX-KsL" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.364734" constant="224.000124" id="8ag-1y-iyK"/>
                             <constraint firstItem="ghF-BE-gqd" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0267857" id="DKF-eK-8Rq"/>
                             <constraint firstItem="cYy-hZ-WzL" firstAttribute="centerX" secondItem="TtI-1n-oU3" secondAttribute="centerX" id="EU4-1c-4tg"/>
                             <constraint firstItem="cph-uK-qvH" firstAttribute="top" secondItem="9yI-zk-nMY" secondAttribute="bottom" constant="34" id="Ebt-Tw-kej"/>
                             <constraint firstItem="Cm4-gT-oZX" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.777778" id="INF-QM-5f5"/>
                             <constraint firstItem="uhR-ts-ehu" firstAttribute="centerY" secondItem="BFq-Ps-5iT" secondAttribute="centerY" id="KQz-er-FyW"/>
                             <constraint firstItem="Cm4-gT-oZX" firstAttribute="height" secondItem="BFq-Ps-5iT" secondAttribute="height" multiplier="0.0379464" constant="16.000025600000001" id="LW8-p4-4jj"/>
-                            <constraint firstItem="ghF-BE-gqd" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.642512" id="SIl-nH-dHa"/>
+                            <constraint firstItem="ghF-BE-gqd" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.642512" constant="148.00003200000003" id="SIl-nH-dHa"/>
                             <constraint firstItem="cph-uK-qvH" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.777778" id="Thg-ga-nUA"/>
                             <constraint firstItem="ghF-BE-gqd" firstAttribute="centerX" secondItem="TtI-1n-oU3" secondAttribute="centerX" id="VEU-tO-UsQ"/>
                             <constraint firstItem="cYy-hZ-WzL" firstAttribute="width" secondItem="BFq-Ps-5iT" secondAttribute="width" multiplier="0.47343" id="YWs-Jz-zzP"/>

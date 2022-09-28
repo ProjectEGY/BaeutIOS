@@ -19,14 +19,14 @@ class ResponseHandler{
     
     func handleResponseErrors(response:URLResponse?, error:Error?) ->LocalizedError?{
         
-        if let error = error {
-            if (error as? URLError)?.code == .timedOut {
-                return AppError.timeOut
-            }else{
-                return error as? LocalizedError
-            }
-        }
-        
+//        if let error = error {
+//            if (error as? URLError)?.code == .timedOut {
+//                return AppError.timeOut
+//            }else{
+//                return error as? LocalizedError
+//            }
+//        }
+//        
         
 //        guard let response = response else{
 //            return AppError.unknownError

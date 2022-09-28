@@ -14,7 +14,7 @@ class MyAccount: UIViewController{
 //   override var navigationItem: UINavigationItem
     @IBOutlet var arrowImages: [UIImageView]!
     @IBOutlet weak var logInView: UIView!
-    @IBOutlet weak var logOutIndicator: NVActivityIndicatorView!
+    @IBOutlet var logOutIndicator: NVActivityIndicatorView!
     @IBOutlet weak var logOut: UIView!
     @IBOutlet weak var profileInfoHight: NSLayoutConstraint!
     @IBOutlet weak var complaints: UIView!
@@ -22,14 +22,12 @@ class MyAccount: UIViewController{
     @IBOutlet weak var notificatios: UIView!
     @IBOutlet weak var wallet: UIView!
     @IBOutlet weak var profile: UIView!
+    @IBOutlet weak var deleteView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
-    
     @IBOutlet weak var userName: UILabel!
-    
-    
-    @IBOutlet weak var points: UILabel!
     @IBOutlet weak var userPhone: UILabel!
     
+    let appUrl = "https://apps.apple.com/us/app/Beuat/6443587383"
 //    let navBarAppearance = UINavigationBarAppearance()
      
     override func viewDidLoad() {
@@ -78,9 +76,7 @@ class MyAccount: UIViewController{
         alretSheet.addAction(UIAlertAction(title: "CANCEL".localized, style: .default, handler: nil))
         present(alretSheet, animated: true, completion: nil)
     }
-    
-    /// <#Description#>
-    /// - Parameter sender: <#sender description#>
+ 
     @IBAction func logOut(_ sender: Any) {
         UserDefaults.standard.isUserLoggedInt = false
         handleLogInAndLogOut()
@@ -92,6 +88,70 @@ class MyAccount: UIViewController{
 
     }
     
+    @IBAction func rateApp(_ sender: Any) {
+        guard let appURL = NSURL(string:self.appUrl) else{return}
+        if UIApplication.shared.canOpenURL(appURL as URL) {
+                UIApplication.shared.open(appURL as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    private func logUserOut(){
+        UserDefaults.standard.isUserLoggedInt = false
+        UserDefaults.standard.didUserSelectCity = false
+        handleLogInAndLogOut()
+        UserDefaults.standard.set(nil, forKey: "userAccountInfo")
+        logOutIndicator.customIndicator(start: true, type: .ballTrianglePath)
+        
+        profileInfoHight.constant = 250
+        logOutIndicator.customIndicator(start: false)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "SignIn", bundle:nil)
+        
+        let logIn = storyBoard.instantiateViewController(withIdentifier: "SignIn") as! LogInNavBarViewController
+        self.present(logIn, animated:true, completion:nil)
+    }
+    
+    func getTodayString() -> String{
+
+                    let date = Date()
+                    let calender = Calendar.current
+                    let components = calender.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+
+                    let year = components.year
+                    let month = components.month
+                    let hour = components.hour
+                    let minute = components.minute
+                    let second = components.second
+
+                    let today_string = String(year!) + String(month!) + String(hour!) + String(minute!) +  String(second!)
+
+                    return today_string
+
+                }
+    
+    private func deleteUserAccount(body:[String:Any]){
+        logOutIndicator.customIndicator(start: true, type: .ballTrianglePath)
+        self.makeViewInVisible(wannaMakeItVisible: true)
+        NetworkService.shared.updateProfile(parameters: body){
+            [weak self] (result) in
+            
+            switch result{
+            case .success(let data):
+                self?.logOutIndicator.customIndicator(start: false)
+                self?.makeViewInVisible(wannaMakeItVisible: false)
+                if data.errorCode! == 0{
+                    self?.logUserOut()
+                    self?.showInofToUser(message: "DeletedSuccessfully".localized)
+                }else{
+                    self?.showInofToUser(title: "Error", message: "\(data.errorMessage ?? "")")
+                }
+            case .failure(let error):
+                self?.logOutIndicator.customIndicator(start: false)
+                self?.makeViewInVisible(wannaMakeItVisible: false)
+                self?.showInofToUser(title: "Error", message: error.localizedDescription)
+            }
+        }
+    }
+    
     private func handleLogInAndLogOut(){
         if !UserDefaults.standard.isUserLoggedInt{
             profile.isHidden = true
@@ -101,9 +161,12 @@ class MyAccount: UIViewController{
             complaints.isHidden = true
             logOut.isHidden = true
             logInView.isHidden = false
+            deleteView.isHidden = false
             userName.removeFromSuperview()
             userPhone.removeFromSuperview()
 //            points.removeFromSuperview()
+        }else{
+            deleteView.isHidden = true
         }
     }
 //    @IBAction func logIn(_ sender: Any) {
@@ -116,13 +179,26 @@ class MyAccount: UIViewController{
 //                self.present(loginView, animated:true, completion:nil)
 //    }
     
+    @IBAction func deleteAccount(_ sender: Any) {
+        let newNumber = "0100" + getTodayString()
+        
+        let body = ["Name":"Name_" + newNumber, "Phone":newNumber, "Password":"", "Image":""]
+        let alretSheet = UIAlertController(title: "DeleteAccount".localized, message: "wannaDelete".localized, preferredStyle: .alert)
+
+        alretSheet.addAction(UIAlertAction(title: "Delete".localized, style: .destructive, handler: {
+            action in
+            self.deleteUserAccount(body:body)
+            
+        }))
+     
+        alretSheet.addAction(UIAlertAction(title: "CANCEL".localized, style: .cancel, handler: nil))
+        present(alretSheet, animated: true, completion: nil)
+        
+    }
     
     @IBAction func shareApp(_ sender: Any) {
-        // text to share
-               let text = "https://esfenja.page.link/WWy67ngwr1dEkwbA6"
-               
-               // set up activity view controller
-               let textToShare = [ text ]
+        
+        let textToShare = [ "Bueat - بيوت", self.appUrl ]
                let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
                activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
                

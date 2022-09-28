@@ -14,6 +14,7 @@ class Search: UIViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     @IBOutlet weak var searchResultsTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchIndicator: NVActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("Search", comment: "search page view")
@@ -71,15 +72,6 @@ extension Search:UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier) as! SearchTableViewCell
-        cell.addToBasket.tag = indexPath.row
-        cell.plusBtn.tag = indexPath.row
-        cell.minusBtn.tag = indexPath.row
-        
-        cell.addToBasket.addTarget(self, action: #selector(addToBasket(sender:)), for: .touchUpInside)
-        
-        cell.plusBtn.addTarget(self, action: #selector(incrementQuantity(sender: )), for: .touchUpInside)
-        
-        cell.minusBtn.addTarget(self, action: #selector(decrementQuantity(sender: )), for: .touchUpInside)
         cell.setUpSearchResult(result: searchResults[indexPath.row])
         
         return cell
@@ -89,74 +81,20 @@ extension Search:UITableViewDelegate, UITableViewDataSource{
         return 400
     }
     
-    @objc func decrementQuantity(sender:UIButton){
-        let cell = self.searchResultsTableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! SearchTableViewCell
-        if cell.quantityValue > 1{
-            cell.quantityValue -= 1
-        }
-        
-        cell.quantity.text = "\(cell.quantityValue)"
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "ProductDetails", bundle: nil)
+        let productDetails = storyboard.instantiateViewController(withIdentifier: "ProductDetailsVC" ) as! ProductDetailsVC
+        productDetails.product = searchResults[indexPath.row]
+        self.navigationController?.pushViewController(productDetails, animated: true)
     }
     
-    @objc func incrementQuantity(sender:UIButton){
-        let cell = self.searchResultsTableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! SearchTableViewCell
-        
-        cell.quantityValue += 1
-        cell.quantity.text = "\(cell.quantityValue)"
-    }
+   
     
-    @objc func addToBasket(sender:UIButton){
-        if !UserDefaults.standard.isUserLoggedInt{
-            UserDefaults.standard.isUserLoggedInt = false
-            let storyBoard : UIStoryboard = UIStoryboard(name: "SignIn", bundle:nil)
+  
     
-            let loginView = storyBoard.instantiateViewController(withIdentifier: "SignIn") as! LogInNavBarViewController
     
-            self.present(loginView, animated:true, completion:nil)
-        }else{
-            guard let productId = searchResults[sender.tag].productId else {return}
-            let cell = self.searchResultsTableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! SearchTableViewCell
-            let optionsModifiers = ["Id":0, "Quantity":cell.quantityValue]
-            let body = [
-                "ProductId":productId,
-                "SizeId":-1, // in case that product does not have size, send any number <= 0
-                "Quantity":cell.quantityValue,
-                "Modifiers":optionsModifiers,
-                "Note":"note"
-            ] as [String : Any]
-            
-            self.addItemToBasket(body: body)
-        }
-    }
     
-    private func addItemToBasket(body:JSON){
-        self.searchIndicator.customIndicator(start: true, type: .ballTrianglePath)
-           
-          
-            
-            NetworkService.shared.addToBasket(body: body){
-                [weak self] (result) in
-                
-                switch result{
-                case .success(let data):
-                    if data.errorCode == 0{
-                        self?.searchIndicator.customIndicator(start: false)
-                        self?.showInofToUser(message: "productadd".localized)
-                       
-                    }else{
-                        self?.searchIndicator.customIndicator(start: false)
-                        if let message = data.errorMessage{
-                            self?.showInofToUser(title: "Error", message: "\(message)")
-                        }
-                       
-                      
-                    }
-                    case .failure(let error):
-                    self?.searchIndicator.customIndicator(start: false)
-                    self?.showInofToUser(title: "Error", message: "\(error.localizedDescription)")
-                }
-            }
-    }
+    
     
     
 }

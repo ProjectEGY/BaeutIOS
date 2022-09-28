@@ -20,7 +20,7 @@ class BasketViewController: UIViewController, UITabBarControllerDelegate {
     @IBOutlet weak var storeImage: UIImageView!
     
     @IBOutlet weak var storeDescription: UILabel!
-    @IBOutlet weak var backButton: UIBarButtonItem!
+//    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var notes: CustomForComplaints!
     @IBOutlet weak var orderButton: UIButton!
     @IBOutlet weak var emptyCardView: UIView!
@@ -63,21 +63,22 @@ class BasketViewController: UIViewController, UITabBarControllerDelegate {
     @IBOutlet weak var bsketIndicator: NVActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.tabBarController?.selectedIndex = 2
         title = "Basket".localized
         basketItemsTableView.register(UINib(nibName: BasketItemTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: BasketItemTableViewCell.identifier)
         self.loadBasket()
         
-        if LocalizationManager.shared.getLanguage() == .Arabic{
-            backButton.image = UIImage(named: "back_arrow_arabic")
-        }
+//        if LocalizationManager.shared.getLanguage() == .Arabic{
+//            backButton.image = UIImage(named: "back_arrow_arabic")
+//        }
 //        setUpViewConfigurations()
-        if !BasketViewController.enabled{
-            backButton.isEnabled = false
-            backButton.tintColor = .white
-        }else{
-            backButton.isEnabled = true
-            backButton.tintColor = .black
-        }
+//        if !BasketViewController.enabled{
+//            backButton.isEnabled = false
+//            backButton.tintColor = .white
+//        }else{
+//            backButton.isEnabled = true
+//            backButton.tintColor = .black
+//        }
         
     }
     
@@ -379,6 +380,7 @@ class BasketViewController: UIViewController, UITabBarControllerDelegate {
 
 @available(iOS 13.0, *)
 extension BasketViewController{
+    
     /// Load user basket using api
      func loadBasket(){
         if UserDefaults.standard.isUserLoggedInt{

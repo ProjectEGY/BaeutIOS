@@ -205,6 +205,7 @@ struct NetworkService {
                 result = .failure(errorStatus)
             }else{
                 if let error = error {
+                    print("Fayed343")
                     result = .failure(error)
                 }
             }
@@ -237,6 +238,7 @@ struct NetworkService {
         
         if let result = UserDefaults.standard.readCurrentUserLocation(key: "currentUserLocation"){
             if let longitude = result.longitude, let latitude = result.latitude{
+                print("Userlocation:\(result)")
                 urlRequest.addValue("\(longitude)", forHTTPHeaderField: "longitude")
                 urlRequest.addValue("\(latitude)", forHTTPHeaderField: "latitude")
             }else{
@@ -244,6 +246,7 @@ struct NetworkService {
                 urlRequest.addValue("51.50998", forHTTPHeaderField: "latitude")            }
         }
         if let aredId = UserDefaults.standard.areaId{
+            print("areaid:\(aredId)")
             urlRequest.addValue("\(aredId)", forHTTPHeaderField: "areaId")
         }else{
             urlRequest.addValue("\(-1)", forHTTPHeaderField: "areaId")
@@ -251,6 +254,7 @@ struct NetworkService {
         
         if isAuthorizedRequest!{
             if let token = JWT.shared.getJWT() {
+                print("toekn:\(token)")
                 urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             }
         }

@@ -141,7 +141,7 @@ extension SubCategoryVC:UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 218
+        return 152
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

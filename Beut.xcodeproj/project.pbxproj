@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34032C2428E43E2F003CFBB1 /* ProductDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34032C2328E43E2F003CFBB1 /* ProductDetails.storyboard */; };
+		34032C2728E43E5D003CFBB1 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34032C2628E43E5D003CFBB1 /* ProductDetailsVC.swift */; };
+		34032C2A28E44623003CFBB1 /* SizesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34032C2928E44623003CFBB1 /* SizesTableViewCell.swift */; };
 		3406E76A28DCBB0C00CE9648 /* CustomOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3406E76928DCBB0C00CE9648 /* CustomOrder.storyboard */; };
 		34071CE428635F23009AF943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34071CE328635F23009AF943 /* Assets.xcassets */; };
 		3409CF5628B68014004AFA44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3409CF5828B68014004AFA44 /* InfoPlist.strings */; };
@@ -143,6 +146,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34032C2328E43E2F003CFBB1 /* ProductDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetails.storyboard; sourceTree = "<group>"; };
+		34032C2628E43E5D003CFBB1 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
+		34032C2928E44623003CFBB1 /* SizesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizesTableViewCell.swift; sourceTree = "<group>"; };
 		3406E76928DCBB0C00CE9648 /* CustomOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomOrder.storyboard; sourceTree = "<group>"; };
 		34071CE328635F23009AF943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3409CF5728B68014004AFA44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -310,6 +316,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34032C2528E43E41003CFBB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34032C2828E445FE003CFBB1 /* Sizes Cell */,
+				34032C2628E43E5D003CFBB1 /* ProductDetailsVC.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		34032C2828E445FE003CFBB1 /* Sizes Cell */ = {
+			isa = PBXGroup;
+			children = (
+				34032C2928E44623003CFBB1 /* SizesTableViewCell.swift */,
+			);
+			path = "Sizes Cell";
+			sourceTree = "<group>";
+		};
 		34110CD228E0A7C700C4C61E /* Search table view cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +357,7 @@
 				3445B80628A2841100EEC9ED /* OrdersDetails.storyboard */,
 				3445B80128A2837800EEC9ED /* Store.storyboard */,
 				349AE53928DC8CB400503D07 /* StoreCategoy.storyboard */,
+				34032C2328E43E2F003CFBB1 /* ProductDetails.storyboard */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -508,6 +532,7 @@
 		3474B9412865F70B00295A7A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				34032C2528E43E41003CFBB1 /* Products */,
 				345F4C5828E063F8007E963F /* Offers */,
 				34849E7728DB10A900C5265A /* Sub Categories */,
 				34B36BA928DA2A1A007586B1 /* Cells */,
@@ -894,6 +919,7 @@
 				3478F10828C4B8D800AC9399 /* Tajawal-Light.otf in Resources */,
 				34849E7628DB108800C5265A /* SubCategory.storyboard in Resources */,
 				3445B7F528A27F3900EEC9ED /* ChangeCity.storyboard in Resources */,
+				34032C2428E43E2F003CFBB1 /* ProductDetails.storyboard in Resources */,
 				3445B7FF28A2837800EEC9ED /* Store.storyboard in Resources */,
 				3445B7DA28A26BC500EEC9ED /* SignIn.storyboard in Resources */,
 				3474B94A2866249700295A7A /* Notifications.storyboard in Resources */,
@@ -1020,6 +1046,7 @@
 				34E22D0528DB2E9400D74BB8 /* StoreCategoriesCollectionViewCell.swift in Sources */,
 				34E08EA9289199A4005D823B /* NotificationTableViewCell.swift in Sources */,
 				34849E7928DB10CA00C5265A /* SubCategoryVC.swift in Sources */,
+				34032C2728E43E5D003CFBB1 /* ProductDetailsVC.swift in Sources */,
 				349ACB85288E929300BFD7A3 /* genral_response.swift in Sources */,
 				34577011287444350054AF87 /* Custom_Extension.swift in Sources */,
 				3454A9B6288D3EC400135AC8 /* IncreaseBasketItem.swift in Sources */,
@@ -1030,6 +1057,7 @@
 				34270BE12881B11700BE5980 /* UIImageView_Extensions.swift in Sources */,
 				349ACB8D288EE1E100BFD7A3 /* user_orders.swift in Sources */,
 				34E08E87288FFC5A005D823B /* CustomErrors.swift in Sources */,
+				34032C2A28E44623003CFBB1 /* SizesTableViewCell.swift in Sources */,
 				34A1EE41286B0795009DB355 /* MyTabBar.swift in Sources */,
 				34586FEE2887FBD0004E0A5E /* Address.swift in Sources */,
 				34EC941028C10338008E3F03 /* LocationHelper.swift in Sources */,
@@ -1374,9 +1402,12 @@
 				DEVELOPMENT_TEAM = S8N3FKQG78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Beut/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow using camera";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1385,7 +1416,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pegy.beut;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pegy.beuat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1404,9 +1435,12 @@
 				DEVELOPMENT_TEAM = S8N3FKQG78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Beut/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow using camera";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1415,7 +1449,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pegy.beut;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pegy.beuat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

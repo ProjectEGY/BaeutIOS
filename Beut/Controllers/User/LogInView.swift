@@ -51,15 +51,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.btnLogIn.isEnabled = false
         self.indicator.customIndicator(start: false)
         self.makeViewInVisible(wannaMakeItVisible: false)
-        if !UserDefaults.standard.didUserSelectCity{
-        let storyboard = UIStoryboard(name: "ChangeCity", bundle: nil)
-        let selectCity = storyboard.instantiateViewController(withIdentifier: "ChangeCityID") as! ChangeCityViewController
-        self.present(selectCity, animated:true, completion:nil)
-        }else{
             let storyboard = UIStoryboard(name: "TabBarNavigator", bundle: nil)
             let mainHome = storyboard.instantiateViewController(withIdentifier: "MainTabID") as! MyTabBarViewController
             self.present(mainHome, animated:true, completion:nil)
-        }
     }
 
     private func logIn(body:[String:Any]){
@@ -73,6 +67,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             switch result{
             case .success(let data):
                 if data.errorCode! == 0{
+                    print(data)
                     if let encoded = try? encoder.encode(data.data!) {
                         UserDefaults.standard.set(encoded, forKey: "userAccountInfo")
                     }

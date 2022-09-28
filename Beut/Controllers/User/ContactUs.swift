@@ -18,17 +18,37 @@ class ContactUsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ContactUs".localized
-        // Do any additional setup after loading the view.
+        getContactInfo()
+        
     }
     
+    private func renderrContactInfo(){
+        if let contact = contact {
+            self.email.isHidden = false
+            self.phoneNumber.isHidden = false
+            self.address.isHidden = false
+            if let email = contact.email{
+                self.email.text = email
+            }
+            if let phone = contact.phone{
+                self.phoneNumber.text = phone
+            }
+            if let address = contact.address{
+                self.address.text = address
+            }
+        }
+    }
    
     @IBAction func whatsapp(_ sender: Any) {
         guard let contact = contact else {
             return
         }
 
-        guard let whatsappLink = contact.twitter else {return}
-        self.openUrl(url: whatsappLink)
+        guard let number = contact.twitter else {return}
+        
+        let whatssApp = "https://api.whatsapp.com/send?phone=00\(number)"
+        print("Whatssapp:\(whatssApp)")
+        self.openUrl(url: whatssApp)
     }
     
     @IBAction func call(_ sender: Any) {
@@ -43,8 +63,8 @@ class ContactUsViewController: UIViewController {
         guard let contact = contact else {
             return
         }
-        guard let phone = contact.phone else {return}
-        self.makeCall(phoneNumber: phone)
+        guard let email = contact.email else {return}
+        self.openUrl(url: email)
     }
     
     @IBAction func twitter(_ sender: Any) {
@@ -75,7 +95,7 @@ class ContactUsViewController: UIViewController {
     }
     
     private func openUrl(url:String){
-        guard let url = URL(string: "https://facebook.com") else { return }
+        guard let url = URL(string: url) else { return }
         UIApplication.shared.open(url)
     }
     
@@ -85,22 +105,18 @@ class ContactUsViewController: UIViewController {
 
        let phoneUrl = "tel://\(formattedNumber)"
        let url:NSURL = NSURL(string: phoneUrl)!
-
-       if #available(iOS 10, *) {
-          UIApplication.shared.open(url as URL, options: [:], completionHandler:
-          nil)
-       } else {
-         UIApplication.shared.openURL(url as URL)
-       }
+          UIApplication.shared.open(url as URL, options: [:], completionHandler:nil)
     }
     
     private func getContactInfo(){
-        self.indicator.customIndicator(start: true)
+        self.indicator.customIndicator(start: true, type: .ballBeat)
         NetworkService.shared.getContactInfo(parameters: nil) { [weak self] result in
             switch result {
             case .success(let info):
+                print("Info:\(info)")
                 self?.indicator.customIndicator(start: false)
                 self?.contact =  info.data
+                self?.renderrContactInfo()
                 
             case .failure(let error):
                 self?.indicator.customIndicator(start: false)
@@ -108,4 +124,6 @@ class ContactUsViewController: UIViewController {
             }
         }
     }
+    
+//
 }

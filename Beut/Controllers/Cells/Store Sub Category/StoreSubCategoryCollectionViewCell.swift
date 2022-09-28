@@ -11,7 +11,7 @@ class StoreSubCategoryCollectionViewCell: UICollectionViewCell {
     
     static let identifier = String(describing: StoreSubCategoryCollectionViewCell.self)
 
-    @IBOutlet weak var addToBasketBtn: UIButton!
+    @IBOutlet weak var addToBasketBtn: UILabel!
     @IBOutlet weak var minusBtn: UIButton!
     @IBOutlet weak var plausBtn: UIButton!
     @IBOutlet weak var quantity: UILabel!
@@ -24,6 +24,11 @@ class StoreSubCategoryCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.quantity.text = "\(quantityValue)"
+        if #available(iOS 13.0, *) {
+            self.addToBasketBtn.text = "AddToBasket".localized
+        } else {
+            self.addToBasketBtn.text = NSLocalizedString("AddToBasket", comment: "")
+        }
     }
 
     func setUpProduct(product:ProductModel){

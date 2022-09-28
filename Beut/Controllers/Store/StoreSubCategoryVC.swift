@@ -86,7 +86,6 @@ class StoreSubCategoryVC: UIViewController {
            
             switch result{
             case .success(let data):
-                print("Fayed77:\(data)")
                 self?.indicator.customIndicator(start: false)
                 if let data = data.data{
                     if data.count == 0{
@@ -125,15 +124,7 @@ extension StoreSubCategoryVC:UICollectionViewDelegate, UICollectionViewDataSourc
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoreSubCategoryCollectionViewCell.identifier, for: indexPath) as! StoreSubCategoryCollectionViewCell
-            cell.addToBasketBtn.tag = indexPath.row
-            cell.plausBtn.tag = indexPath.row
-            cell.minusBtn.tag = indexPath.row
-            
-            cell.addToBasketBtn.addTarget(self, action: #selector(addToBasket(sender:)), for: .touchUpInside)
-            
-            cell.plausBtn.addTarget(self, action: #selector(incrementQuantity(sender: )), for: .touchUpInside)
-            
-            cell.minusBtn.addTarget(self, action: #selector(decrementQuantity(sender: )), for: .touchUpInside)
+           
             cell.setUpProduct(product: productList[indexPath.row])
             return cell
         }
@@ -145,97 +136,36 @@ extension StoreSubCategoryVC:UICollectionViewDelegate, UICollectionViewDataSourc
                     return cellSize
             }
             else{
-                let cellWidth = self.view.frame.width * 0.2
+                let cellWidth = self.view.frame.width * 0.45
                 return CGSize(width: cellWidth, height: collectionView.frame.height)
             }
 
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return 8
+            if collectionView == products{
+                return 8
+            }
+           return 0
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return 0.3
-        }
-      
-    
-    
-    @objc func decrementQuantity(sender:UIButton){
-        let cell = self.products.cellForItem(at: IndexPath(row: sender.tag, section: 0)) as! StoreSubCategoryCollectionViewCell
-        if cell.quantityValue > 1{
-            cell.quantityValue -= 1
-        }
-        
-        cell.quantity.text = "\(cell.quantityValue)"
-    }
-    
-    @objc func incrementQuantity(sender:UIButton){
-        let cell = self.products.cellForItem(at: IndexPath(row: sender.tag, section: 0)) as! StoreSubCategoryCollectionViewCell
-        
-        cell.quantityValue += 1
-        cell.quantity.text = "\(cell.quantityValue)"
-    }
-    
-    @objc func addToBasket(sender:UIButton){
-        if !UserDefaults.standard.isUserLoggedInt{
-            UserDefaults.standard.isUserLoggedInt = false
-            let storyBoard : UIStoryboard = UIStoryboard(name: "SignIn", bundle:nil)
-    
-            let loginView = storyBoard.instantiateViewController(withIdentifier: "SignIn") as! LogInNavBarViewController
-    
-            self.present(loginView, animated:true, completion:nil)
-        }else{
-            guard let productId = productList[sender.tag].productId else {return}
-            let cell = self.products.cellForItem(at: IndexPath(row: sender.tag, section: 0)) as! StoreSubCategoryCollectionViewCell
-            let optionsModifiers = ["Id":0, "Quantity":cell.quantityValue]
-            let body = [
-                "ProductId":productId,
-                "SizeId":-1, // in case that product does not have size, send any number <= 0
-                "Quantity":cell.quantityValue,
-                "Modifiers":optionsModifiers,
-                "Note":"note"
-            ] as [String : Any]
-            
-            self.addItemToBasket(body: body)
-        }
-    }
-    
-    private func addItemToBasket(body:JSON){
-        self.indicator.customIndicator(start: true, type: .ballTrianglePath)
-           
-          
-            
-            NetworkService.shared.addToBasket(body: body){
-                [weak self] (result) in
-                
-                switch result{
-                case .success(let data):
-                    if data.errorCode == 0{
-                        self?.indicator.customIndicator(start: false)
-                        self?.showInofToUser(message: "productadd".localized)
-                       
-                    }else{
-                        self?.indicator.customIndicator(start: false)
-                        if let message = data.errorMessage{
-                            self?.showInofToUser(title: "Error", message: "\(message)")
-                        }
-                       
-                      
-                    }
-                    case .failure(let error):
-                    self?.indicator.customIndicator(start: false)
-                    self?.showInofToUser(title: "Error", message: "\(error.localizedDescription)")
-                }
+            if collectionView == products{
+                return 0.3
             }
-    }
-    
+           return 0
+        }
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == segment{
             guard let id = segmentCategories[indexPath.row].categoryId else {return}
-            print("ID:\(id)")
             getProductsUsingCategoryId(categoryId: id)
 //            print(segmentCategories[indexPath.row])
+        }else{
+            let storyboard = UIStoryboard(name: "ProductDetails", bundle: nil)
+            let productDetails = storyboard.instantiateViewController(withIdentifier: "ProductDetailsVC" ) as! ProductDetailsVC
+            productDetails.product = productList[indexPath.row]
+            self.navigationController?.pushViewController(productDetails, animated: true)
         }
         
     }

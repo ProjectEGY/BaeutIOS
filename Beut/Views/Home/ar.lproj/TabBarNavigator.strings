@@ -50,6 +50,12 @@
 /* Class = "UILabel"; text = "Log Out"; ObjectID = "IAj-Mm-VjL"; */
 "IAj-Mm-VjL.text" = "تسجيل الخروج";
 
+/* Class = "UILabel"; text = "Delete account"; ObjectID = "uhj-Kd-ZUz"; */
+"uhj-Kd-ZUz.text" = "حذف الحساب";
+
+/* Class = "UILabel"; text = "Log Out"; ObjectID = "xRP-tM-kVQ"; */
+"xRP-tM-kVQ.text" = "لا يوجد عروض متاحة حاليا";
+
 /* Class = "UIBarButtonItem"; title = " "; ObjectID = "IXh-it-nhh"; */
 "IXh-it-nhh.title" = " ";
 
