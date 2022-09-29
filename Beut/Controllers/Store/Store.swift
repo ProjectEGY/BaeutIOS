@@ -94,16 +94,13 @@ class Store: UIViewController{
         }
         
         if let rate = storeDetials.rate{
-            self.storeRate.isUserInteractionEnabled = false
-            if let n = NumberFormatter().number(from: rate) {
-                let num = CGFloat(truncating: n)
-                self.storeRate.value = num
+            if let num = Float(rate){
+                self.storeRate.value = CGFloat(num)
                 if num > 0{
                     self.storeRate.color = .systemYellow
                 }else{
                     self.storeRate.color = .gray
                 }
-                
             }
         }
         

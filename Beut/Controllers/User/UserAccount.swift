@@ -161,12 +161,12 @@ class MyAccount: UIViewController{
             complaints.isHidden = true
             logOut.isHidden = true
             logInView.isHidden = false
-            deleteView.isHidden = false
+            deleteView.isHidden = true
             userName.removeFromSuperview()
             userPhone.removeFromSuperview()
 //            points.removeFromSuperview()
         }else{
-            deleteView.isHidden = true
+            deleteView.isHidden = false
         }
     }
 //    @IBAction func logIn(_ sender: Any) {

@@ -55,6 +55,8 @@ class SignUpViewController: UIViewController {
             let password = try validation.validatePassword(password.text)
             let confirmPass = try validation.validateConfirmPassword(confirmPassword.text)
             _ = try validation.compareTwoPasswords(password, confirmPass)
+            let imageData:NSData = self.userImage.image!.pngData()! as NSData
+            imageStr = imageData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
             let body = ["Name":username, "Phone":phone, "Password":password, "Image":imageStr]
             signUpAPI(body: body)
                 
@@ -77,6 +79,7 @@ class SignUpViewController: UIViewController {
     }
     
     public func signUpAPI(body:[String:Any]){
+        
         self.signUpIndeicator.customIndicator(start: true, type: .ballTrianglePath)
         self.makeViewInVisible(wannaMakeItVisible: true)
         NetworkService.shared.signUp(parameters: body){
@@ -134,8 +137,7 @@ extension SignUpViewController:UIImagePickerControllerDelegate & UINavigationCon
                 self.userImage.image = UIImage(systemName: "camera")
                 self.didSelectImage = false
                 
-                let imageData:NSData = self.userImage.image!.pngData()! as NSData
-                imageStr = imageData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+               
 
             }))
         }
@@ -148,18 +150,12 @@ extension SignUpViewController:UIImagePickerControllerDelegate & UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         
-        
-        
-        
-        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
-                {
+        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             userImage.image = img
-
-                }
-        else if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-                {
+        }
+        else if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             userImage.image = img
-                }
+        }
 
         userImage.makeImageCircular(anyImage: userImage.image!)
         didSelectImage = true

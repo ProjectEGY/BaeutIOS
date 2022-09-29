@@ -18,7 +18,7 @@
 "5Nb-8O-3By.text" = "Total";
 
 /* Class = "UITextField"; placeholder = "Points"; ObjectID = "68L-3J-JQW"; */
-"68L-3J-JQW.placeholder" = "Points";
+"68L-3J-JQW.placeholder" = "Write note (Optional)";
 
 /* Class = "UILabel"; text = "Complaints"; ObjectID = "AFR-BS-dmK"; */
 "AFR-BS-dmK.text" = "Complaints";

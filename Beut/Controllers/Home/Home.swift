@@ -62,7 +62,7 @@ class Home: UIViewController{
             case .success(let data):
                 if let data = data.data{
                 self?.categoriesData = data
-                    self?.categoriesTableViewHight.constant = CGFloat(Double(151 * data.count))
+                    self?.categoriesTableViewHight.constant = CGFloat(Double(218 * data.count))
                     self?.categoriesTableView.reloadData()
                 self?.categoriesIndecator.customIndicator(start: false)
                 }

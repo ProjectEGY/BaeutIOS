@@ -44,16 +44,13 @@ class SubCategoriesTableViewCell: UITableViewCell {
             self.details.text = desc
         }
         if let rate = category.rate{
-            self.rate.isEnabled = false
-            if let n = NumberFormatter().number(from: rate) {
-                let num = CGFloat(truncating: n)
-                self.rate.value = num
+            if let num = Float(rate){
+                self.rate.value = CGFloat(num)
                 if num > 0{
                     self.rate.color = .systemYellow
                 }else{
                     self.rate.color = .gray
                 }
-                
             }
         }
     }

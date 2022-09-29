@@ -11,12 +11,18 @@ class HomeCategoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var catName: UILabel!
     @IBOutlet weak var catImage: UIImageView!
+    @IBOutlet weak var customView: UIView!
     static let identifier = String(describing: HomeCategoryTableViewCell.self)
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+   
+    let myGradiant = CAGradientLayer()
+    override func layoutSubviews() {
+        super.layoutSubviews()
 
+        myGradiant.frame = self.customView.bounds
+        myGradiant.colors = [UIColor.black.cgColor, UIColor.darkGray.cgColor]
+
+        self.customView.layer.insertSublayer(myGradiant, at: 0)
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

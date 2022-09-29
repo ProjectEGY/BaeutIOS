@@ -27,7 +27,7 @@
 "ta3-aw-8yG.text" = "طلب خاص";
 
 /* Class = "UITextField"; placeholder = "Points"; ObjectID = "68L-3J-JQW"; */
-"68L-3J-JQW.placeholder" = "نقطة";
+"68L-3J-JQW.placeholder" = "أكتب ملاحظة (اختياري)";
 
 /* Class = "UILabel"; text = "Complaints"; ObjectID = "AFR-BS-dmK"; */
 "AFR-BS-dmK.text" = "الشكاوي والإقتراحات";
@@ -47,8 +47,12 @@
 /* Class = "UIBarButtonItem"; title = " "; ObjectID = "G4q-Dt-Kqd"; */
 "G4q-Dt-Kqd.title" = " ";
 
-/* Class = "UILabel"; text = "Log Out"; ObjectID = "IAj-Mm-VjL"; */
+/* Class = "UILabel"; text = "Offers"; ObjectID = "IAj-Mm-VjL"; */
 "IAj-Mm-VjL.text" = "تسجيل الخروج";
+
+/* Class = "UILabel"; text = "Log Out"; ObjectID = "OQe-XT-f1a"; */
+"OQe-XT-f1a.text" = "العروض";
+
 
 /* Class = "UILabel"; text = "Delete account"; ObjectID = "uhj-Kd-ZUz"; */
 "uhj-Kd-ZUz.text" = "حذف الحساب";
@@ -100,6 +104,10 @@
 
 /* Class = "UIButton"; normalTitle = "Order"; ObjectID = "Sma-no-O5K"; */
 "Sma-no-O5K.normalTitle" = "اطلب";
+
+/* Class = "UIButton"; normalTitle = "New address"; ObjectID = "iX5-Ju-geP"; */
+"iX5-Ju-geP.normalTitle" = "عنوان جديد";
+
 
 /* Class = "UILabel"; text = "Total"; ObjectID = "T2i-T2-5yg"; */
 "T2i-T2-5yg.text" = "الإجمالي";
