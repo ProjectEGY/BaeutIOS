@@ -36,10 +36,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal" translatesAutoresizingMaskIntoConstraints="NO" id="gG2-7l-ipJ">
-                                <rect key="frame" x="297" y="332.5" width="104" height="34"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4m-yt-Edm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4m-yt-Edm">
                                 <rect key="frame" x="304" y="339" width="90" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -168,16 +165,22 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGr-PZ-6OF">
                                                                         <rect key="frame" x="0.0" y="0.0" width="47" height="49"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" image="minus" title=" "/>
+                                                                        <color key="tintColor" name="MainColor"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title=" " image="minus">
+                                                                            <color key="titleColor" name="MainColor"/>
+                                                                        </state>
                                                                         <connections>
                                                                             <action selector="decrementQuantity:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6Zp-nr-jNx"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-ns-MQO">
                                                                         <rect key="frame" x="110" y="0.0" width="48" height="49"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" image="plus" title=" "/>
+                                                                        <color key="tintColor" name="MainColor"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title=" " image="plus">
+                                                                            <color key="titleColor" name="MainColor"/>
+                                                                        </state>
                                                                         <connections>
                                                                             <action selector="incrementQuantity:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T84-bE-5mF"/>
                                                                         </connections>
@@ -278,40 +281,35 @@
                             <constraint firstItem="y3G-Id-dpl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="BHf-Pi-Imh"/>
                             <constraint firstItem="bYM-GJ-A5y" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="BLu-tM-TNe"/>
                             <constraint firstItem="bYM-GJ-A5y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CDK-1j-h7N"/>
-                            <constraint firstItem="pGe-oZ-b0A" firstAttribute="leading" secondItem="gG2-7l-ipJ" secondAttribute="leading" id="EMl-jk-9Lw"/>
                             <constraint firstItem="q3L-yA-7Am" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="GYH-dW-fvK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UMe-cc-NMn" secondAttribute="trailing" constant="20" id="HnB-ID-cpV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="q3L-yA-7Am" secondAttribute="trailing" constant="20" id="IXs-6H-rO9"/>
                             <constraint firstItem="q3L-yA-7Am" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0234375" constant="20" id="JBf-8X-uug"/>
                             <constraint firstItem="y3G-Id-dpl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="JYe-bw-OHi"/>
-                            <constraint firstItem="gG2-7l-ipJ" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.251208" id="Kfb-hv-UHe"/>
                             <constraint firstItem="y3G-Id-dpl" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0424107" id="P2T-65-0yq"/>
                             <constraint firstItem="UMe-cc-NMn" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0424107" id="Pag-ro-dTC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pGe-oZ-b0A" secondAttribute="trailing" constant="47" id="T7M-zP-VVw"/>
                             <constraint firstItem="bYM-GJ-A5y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="WLt-UR-LuG"/>
                             <constraint firstItem="y3G-Id-dpl" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.113527" id="WPT-nS-71p"/>
                             <constraint firstItem="d4m-yt-Edm" firstAttribute="centerY" secondItem="RE2-QC-r2Y" secondAttribute="centerY" id="YEJ-Uk-NHz"/>
                             <constraint firstItem="UMe-cc-NMn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="a1u-nu-AMx"/>
                             <constraint firstItem="ahs-43-a43" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.241546" id="auD-EM-SjK"/>
                             <constraint firstItem="ahs-43-a43" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="dCd-kH-iBA"/>
+                            <constraint firstItem="pGe-oZ-b0A" firstAttribute="top" secondItem="d4m-yt-Edm" secondAttribute="bottom" constant="14" id="dhw-Xl-n6b"/>
                             <constraint firstItem="RE2-QC-r2Y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="gKc-Ps-hFG"/>
                             <constraint firstItem="ahs-43-a43" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.111607" id="hgS-fJ-sCA"/>
                             <constraint firstItem="RE2-QC-r2Y" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0234375" id="kK2-r3-bWc"/>
                             <constraint firstItem="XYU-1O-FG8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="npy-oi-qxe"/>
-                            <constraint firstItem="gG2-7l-ipJ" firstAttribute="centerY" secondItem="RE2-QC-r2Y" secondAttribute="centerY" id="nxW-a9-BD3"/>
-                            <constraint firstItem="gG2-7l-ipJ" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0379464" id="oQB-Tl-1Xn"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gG2-7l-ipJ" secondAttribute="trailing" constant="13" id="pkn-n4-NBH"/>
                             <constraint firstItem="ahs-43-a43" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="plo-3B-lEQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="d4m-yt-Edm" secondAttribute="trailing" constant="20" id="qR1-rb-qZl"/>
                             <constraint firstItem="RE2-QC-r2Y" firstAttribute="top" secondItem="bYM-GJ-A5y" secondAttribute="bottom" constant="8" id="s9H-oI-XOf"/>
                             <constraint firstItem="pGe-oZ-b0A" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.169082" id="sGQ-pg-mZV"/>
                             <constraint firstItem="UMe-cc-NMn" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.113527" id="uJF-hD-8Mu"/>
-                            <constraint firstItem="pGe-oZ-b0A" firstAttribute="top" secondItem="gG2-7l-ipJ" secondAttribute="bottom" constant="7.5" id="uyE-NJ-5of"/>
                             <constraint firstItem="q3L-yA-7Am" firstAttribute="top" secondItem="pGe-oZ-b0A" secondAttribute="bottom" constant="8" id="wxh-j6-wrH"/>
                             <constraint firstItem="d4m-yt-Edm" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0234375" id="zRg-f8-hJf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="diagonal" destination="gG2-7l-ipJ" id="njB-wG-eel"/>
                         <outlet property="imageSlider" destination="bYM-GJ-A5y" id="UVp-er-gPv"/>
                         <outlet property="indicator" destination="ahs-43-a43" id="ynF-AM-fz5"/>
                         <outlet property="productDetails" destination="q3L-yA-7Am" id="p4F-Sg-6Hr"/>
@@ -333,7 +331,6 @@
     <resources>
         <image name="CompositeLayer-7" width="76" height="50"/>
         <image name="circle2" width="30" height="30"/>
-        <image name="diagonal" width="150" height="75"/>
         <image name="minus" width="30" height="30"/>
         <image name="plus" width="30" height="30"/>
         <namedColor name="MainColor">

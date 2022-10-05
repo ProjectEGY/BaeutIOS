@@ -328,7 +328,6 @@ class BasketViewController: UIViewController, UITabBarControllerDelegate {
                     case 0:
                         self?.showInofToUser(message:"AddedSuccessfully".localized)
                     case 1:
-                        print("PaymentData:\(data)")
                         let storyboard = UIStoryboard(name: "TermsAndConditions", bundle: nil)
                         let paymentView = storyboard.instantiateViewController(withIdentifier: "OnlinePaymentVC") as! OnlinePaymentVC
                         if let url = data.data{

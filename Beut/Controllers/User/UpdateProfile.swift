@@ -10,9 +10,8 @@ import Kingfisher
 import NVActivityIndicatorView
 @available(iOS 13.0, *)
 @available(iOS 13.0, *)
-class AccountSettings: UIViewController {
+class AccountSettings: UIViewController, UITextFieldDelegate  {
 
-    @IBOutlet weak var penEditImage: UIImageView!
     @IBOutlet weak var updateIndicator: NVActivityIndicatorView!
     private var didSelectImage = false
     let imagePicker = UIImagePickerController()
@@ -34,7 +33,6 @@ class AccountSettings: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        penEditImage.makeImageCircular(anyImage: penEditImage.image!)
         txtUsername.addLeftImage(image: UIImage(named: "profile_small")!)
         txtPhone.addLeftImage(image: UIImage(named: "phone_small")!)
         title = "Profile".localized
@@ -51,12 +49,17 @@ class AccountSettings: UIViewController {
         }
         
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     @IBAction func editProfileInfo(_ sender: Any) {
         do{
             let name = try validation.validateUsername(txtUsername.text)
             let phone = try validation.validatePhoneNumber(txtPhone.text)
             
-            var body = ["Name":name, "Phone":phone, "Password":"", "Image":""]
+            var body = ["Name":name, "Phone":phone, "Image":""]
             if didSelectImage{
                 let imageData:NSData = profileImage.image!.pngData()! as NSData
                 let imageStr = imageData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
@@ -84,12 +87,14 @@ class AccountSettings: UIViewController {
             case .success(let data):
                 self?.updateIndicator.customIndicator(start: false)
                 self?.makeViewInVisible(wannaMakeItVisible: false)
-                if data.errorCode! == 0{
-                    self?.updateUserDefaultsInfo(user:data.data!)
-                    self?.showInofToUser(message: "Profileupdatedsuccessfully".localized)
-                }else{
+                guard let errorCode = data.errorCode, errorCode == 0 else {
                     self?.showInofToUser(title: "Error", message: "\(data.errorMessage ?? "")")
+                    return
                 }
+                guard let user = data.data else {return}
+                self?.updateUserDefaultsInfo(user:user)
+                self?.showInofToUser(message: "Profileupdatedsuccessfully".localized)
+                
             case .failure(let error):
                 self?.updateIndicator.customIndicator(start: false)
                 self?.makeViewInVisible(wannaMakeItVisible: false)
@@ -100,17 +105,21 @@ class AccountSettings: UIViewController {
     private func updateUserDefaultsInfo(user:User){
         var user = user
         let encoder = JSONEncoder()
-        var token:String?
-        if let result = UserDefaults.standard.readUserInfoFromoUserDefaults(key:"userAccountInfo"){
-            token = result.token!
+        if user.token != nil{
+            if let encoded = try? encoder.encode(user) {
+                UserDefaults.standard.set(encoded, forKey: "userAccountInfo")
+            }
+        }else{
+            if let result = UserDefaults.standard.readUserInfoFromoUserDefaults(key:"userAccountInfo"){
+                guard let oldToken = result.token else {return}
+                user.token = oldToken
+                if let encoded = try? encoder.encode(user) {
+                    UserDefaults.standard.set(encoded, forKey: "userAccountInfo")
+                }
+                
+            }
+            
         }
-        if let token = token {
-            user.token? = token
-        }
-        if let encoded = try? encoder.encode(user) {
-            UserDefaults.standard.set(encoded, forKey: "userAccountInfo")
-        }
-        
     }
 }
 
@@ -120,14 +129,19 @@ extension AccountSettings:UIImagePickerControllerDelegate & UINavigationControll
 
     private func choseImage(){
         
-        let alretSheet = UIAlertController(title: "SelectPhoto".localized, message: nil, preferredStyle: .actionSheet)
-        alretSheet.addAction(UIAlertAction(title: "Takephoto".localized, style: .default, handler: {
-            action in
-            self.imagePicker.sourceType = UIImagePickerController.SourceType.camera
-            self.imagePicker.delegate = self
-            self.present(self.imagePicker, animated: true, completion: nil)
+        var alretSheet = UIAlertController(title: "SelectPhoto".localized, message: nil, preferredStyle: .actionSheet)
         
-        }))
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            alretSheet = UIAlertController(title: "ChangeLanguage".localized, message: nil, preferredStyle: .alert)
+        }
+        
+//        alretSheet.addAction(UIAlertAction(title: "Takephoto".localized, style: .default, handler: {
+//            action in
+//            self.imagePicker.sourceType = UIImagePickerController.SourceType.camera
+//            self.imagePicker.delegate = self
+//            self.present(self.imagePicker, animated: true, completion: nil)
+//
+//        }))
         
         alretSheet.addAction(UIAlertAction(title: "SelectfromAlbum".localized, style: .default, handler: {
             

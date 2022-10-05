@@ -8,18 +8,19 @@
 import UIKit
 import NVActivityIndicatorView
 @available(iOS 13.0, *)
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     let imagePicker = UIImagePickerController()
     private var didSelectImage = false
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var signUpIndeicator: NVActivityIndicatorView!
     @IBOutlet weak var userImage: UIImageView!
     var imageStr = ""
-    @IBOutlet weak var name: Custom!
-    @IBOutlet weak var phoneNumber: Custom!
-    @IBOutlet weak var password: Custom!
-    @IBOutlet weak var confirmPassword: Custom!
+    @IBOutlet weak var name: CustomUITextField!
+    @IBOutlet weak var phoneNumber: CustomUITextField!
+    @IBOutlet weak var password: CustomUITextField!
+    @IBOutlet weak var confirmPassword: CustomUITextField!
     
     private var validation:ValidationService
     
@@ -39,24 +40,34 @@ class SignUpViewController: UIViewController {
         title = "CreateAccount".localized
         super.viewDidLoad()
         self.imagePicker.allowsEditing = true
-//        userImage.makeImageCircular(anyImage:userImage.image!)
-        self.name.handleArabicLanguage()
-        self.phoneNumber.handleArabicLanguage()
-        self.password.handleArabicLanguage()
-        self.confirmPassword.handleArabicLanguage()
+        userImage.makeImageCircular(anyImage:userImage.image!)
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == password{
+            scrollView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
+        }else if textField == confirmPassword{
+            scrollView.setContentOffset(CGPoint(x: 0, y: 120), animated: true)
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        return false
+    }
+    
+    private func showINfo(){
+        
     }
     
     @IBAction func signUp(_ sender: Any) {
         
             do{
-                
             let username = try validation.validateUsername(name.text)
             let phone = try validation.validatePhoneNumber(phoneNumber.text)
             let password = try validation.validatePassword(password.text)
             let confirmPass = try validation.validateConfirmPassword(confirmPassword.text)
             _ = try validation.compareTwoPasswords(password, confirmPass)
-            let imageData:NSData = self.userImage.image!.pngData()! as NSData
-            imageStr = imageData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
             let body = ["Name":username, "Phone":phone, "Password":password, "Image":imageStr]
             signUpAPI(body: body)
                 
@@ -79,7 +90,6 @@ class SignUpViewController: UIViewController {
     }
     
     public func signUpAPI(body:[String:Any]){
-        
         self.signUpIndeicator.customIndicator(start: true, type: .ballTrianglePath)
         self.makeViewInVisible(wannaMakeItVisible: true)
         NetworkService.shared.signUp(parameters: body){
@@ -114,14 +124,18 @@ extension SignUpViewController:UIImagePickerControllerDelegate & UINavigationCon
     
     private func choseImage(){
         
-        let alretSheet = UIAlertController(title: "SelectPhoto".localized, message: nil, preferredStyle: .actionSheet)
-        alretSheet.addAction(UIAlertAction(title: "Takephoto".localized, style: .default, handler: {
-            action in
-            self.imagePicker.sourceType = UIImagePickerController.SourceType.camera
-            self.imagePicker.delegate = self
-            self.present(self.imagePicker, animated: true, completion: nil)
-        
-        }))
+        var alretSheet = UIAlertController(title: "SelectPhoto".localized, message: nil, preferredStyle: .actionSheet)
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            alretSheet = UIAlertController(title: "ChangeLanguage".localized, message: nil, preferredStyle: .alert)
+        }
+
+//        alretSheet.addAction(UIAlertAction(title: "Takephoto".localized, style: .default, handler: {
+//            action in
+//            self.imagePicker.sourceType = UIImagePickerController.SourceType.camera
+//            self.imagePicker.delegate = self
+//            self.present(self.imagePicker, animated: true, completion: nil)
+//
+//        }))
         
         alretSheet.addAction(UIAlertAction(title: "SelectfromAlbum".localized, style: .default, handler: {
             
@@ -137,7 +151,8 @@ extension SignUpViewController:UIImagePickerControllerDelegate & UINavigationCon
                 self.userImage.image = UIImage(systemName: "camera")
                 self.didSelectImage = false
                 
-               
+                let imageData:NSData = self.userImage.image!.pngData()! as NSData
+                imageStr = imageData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
 
             }))
         }
@@ -150,12 +165,18 @@ extension SignUpViewController:UIImagePickerControllerDelegate & UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         
-        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+        
+        
+        
+        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+                {
             userImage.image = img
-        }
-        else if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+
+                }
+        else if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+                {
             userImage.image = img
-        }
+                }
 
         userImage.makeImageCircular(anyImage: userImage.image!)
         didSelectImage = true

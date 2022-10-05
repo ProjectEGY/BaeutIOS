@@ -64,7 +64,7 @@ extension OffersVC:UICollectionViewDelegate, UICollectionViewDataSource,UIPageVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.3
+        return 0.1
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

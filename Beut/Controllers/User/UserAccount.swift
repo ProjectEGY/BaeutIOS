@@ -11,7 +11,6 @@ import NVActivityIndicatorView
 @available(iOS 13.0, *)
 class MyAccount: UIViewController{
    
-//   override var navigationItem: UINavigationItem
     @IBOutlet var arrowImages: [UIImageView]!
     @IBOutlet weak var logInView: UIView!
     @IBOutlet var logOutIndicator: NVActivityIndicatorView!
@@ -28,64 +27,36 @@ class MyAccount: UIViewController{
     @IBOutlet weak var userPhone: UILabel!
     
     let appUrl = "https://apps.apple.com/us/app/Beuat/6443587383"
-//    let navBarAppearance = UINavigationBarAppearance()
-     
+    
     override func viewDidLoad() {
-        print(arrowImages.count)
-
         super.viewDidLoad()
-        self.navigationController?.navigationBar.tintColor = UIColor(named: "EsfenjaColor")
         handleLogInAndLogOut()
         renderUserInfo()
         setUpLanguage()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.renderUserInfo()
+    }
+    
     private func setUpLanguage(){
-        if let currentLanguage = LocalizationManager.shared.getLanguage(){
-            if currentLanguage == .Arabic{
+        if MOLHLanguage.currentAppleLanguage() == "ar"{
             for image in arrowImages{
                 image.image = UIImage(named: "right")
-//                image.image?.flipsForRightToLeftLayoutDirection
             }
         }
-        }
     }
+    
     @IBAction func changeLanguage(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "TabBarNavigator", bundle: nil)
-        let mainHome = storyboard.instantiateViewController(withIdentifier: "MainTabID") as! MyTabBarViewController
-        var alretSheet = UIAlertController(title: "ChangeLanguage".localized, message: nil, preferredStyle: .actionSheet)
-        if UIDevice.current.userInterfaceIdiom == .pad{
-            alretSheet = UIAlertController(title: "ChangeLanguage".localized, message: nil, preferredStyle: .alert)
-        }
-        alretSheet.addAction(UIAlertAction(title: "English".localized, style: .default, handler: {
-            action in
-            LocalizationManager.shared.setLanguage(language: .English)
-            
-            self.present(mainHome, animated:true, completion:nil)
-        }))
-        
-        alretSheet.addAction(UIAlertAction(title: "Arabic".localized, style: .default, handler: {
-            
-            action in
-           
-            LocalizationManager.shared.setLanguage(language: .Arabic)
-            
-            self.present(mainHome, animated:true, completion:nil)
-           
-        }))
-        alretSheet.addAction(UIAlertAction(title: "CANCEL".localized, style: .default, handler: nil))
-        present(alretSheet, animated: true, completion: nil)
+        self.changeAppLanguage()
     }
  
     @IBAction func logOut(_ sender: Any) {
         UserDefaults.standard.isUserLoggedInt = false
         handleLogInAndLogOut()
         UserDefaults.standard.set(nil, forKey: "userAccountInfo")
-     
-        let storyboard = UIStoryboard(name: "TabBarNavigator", bundle: nil)
-        let mainHome = storyboard.instantiateViewController(withIdentifier: "MainTabID") as! MyTabBarViewController
-        self.present(mainHome, animated:true, completion:nil)
-
+        self.goToHomePage()
     }
     
     @IBAction func rateApp(_ sender: Any) {
@@ -100,14 +71,7 @@ class MyAccount: UIViewController{
         UserDefaults.standard.didUserSelectCity = false
         handleLogInAndLogOut()
         UserDefaults.standard.set(nil, forKey: "userAccountInfo")
-        logOutIndicator.customIndicator(start: true, type: .ballTrianglePath)
-        
-        profileInfoHight.constant = 250
-        logOutIndicator.customIndicator(start: false)
-        let storyBoard : UIStoryboard = UIStoryboard(name: "SignIn", bundle:nil)
-        
-        let logIn = storyBoard.instantiateViewController(withIdentifier: "SignIn") as! LogInNavBarViewController
-        self.present(logIn, animated:true, completion:nil)
+        self.presentViewController(storyboardName: "SignIn", with: "SignIn")
     }
     
     func getTodayString() -> String{
@@ -150,6 +114,36 @@ class MyAccount: UIViewController{
                 self?.showInofToUser(title: "Error", message: error.localizedDescription)
             }
         }
+    }
+    
+    private func changeAppLanguage(){
+        var alretSheet = UIAlertController(title: "ChangeLanguage".localized, message: nil, preferredStyle: .actionSheet)
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            alretSheet = UIAlertController(title: "ChangeLanguage".localized, message: nil, preferredStyle: .alert)
+        }
+        alretSheet.addAction(UIAlertAction(title: "English".localized, style: .default, handler: {
+            action in
+            UserDefaults.standard.setValue("English", forKey: "Lang")
+            MOLH.setLanguageTo("en")
+            MOLH.reset()
+            self.goToHomePage()
+        }))
+        
+        alretSheet.addAction(UIAlertAction(title: "Arabic".localized, style: .default, handler: {
+            
+            action in
+            UserDefaults.standard.setValue("Arabic", forKey: "Lang")
+            MOLH.setLanguageTo("ar")
+            MOLH.reset()
+            self.goToHomePage()
+           
+        }))
+        alretSheet.addAction(UIAlertAction(title: "CANCEL".localized, style: .default, handler: nil))
+        present(alretSheet, animated: true, completion: nil)
+    }
+    
+    private func goToHomePage(){
+        self.presentViewController(storyboardName: "TabBarNavigator", with: "MainTabID")
     }
     
     private func handleLogInAndLogOut(){
@@ -209,22 +203,18 @@ class MyAccount: UIViewController{
                self.present(activityViewController, animated: true, completion: nil)
     }
     private func renderUserInfo(){
-        
-       
-        if let result = UserDefaults.standard.readUserInfoFromoUserDefaults(key: "userAccountInfo"){
+        guard let result = UserDefaults.standard.readUserInfoFromoUserDefaults(key: "userAccountInfo") else {return}
             if let image = result.image{
                 let imageUrl = "\(Route.baseUrl)\(image)"
                 self.profileImage.kf.setImage(with:imageUrl.asURL)
             }else{
                 self.profileImage.image = UIImage(named: "avatar")!
             }
-            userName.text = result.name!
-            userPhone.text = result.phone!
-//            if let points = result.point{
-//                self.points.text = "\(points) " + "Points".localized
-//            }else{
-//                self.points.text = "0.0 " + "Points".localized
-//            }
-        }
+            if let name = result.name{
+                userName.text = name
+            }
+            if let phone = result.phone{
+                userPhone.text = phone
+            }
     }
 }

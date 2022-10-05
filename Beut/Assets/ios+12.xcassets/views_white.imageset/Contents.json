@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "car-wash-cover@1x.png",
+      "filename" : "views_white.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "car-wash-cover@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "car-wash-cover@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

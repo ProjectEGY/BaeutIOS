@@ -7,11 +7,12 @@
 
 import Foundation
 import NVActivityIndicatorView
+import UIKit
 
 
 extension NVActivityIndicatorView{
    
-    public func customIndicator(start:Bool, type:NVActivityIndicatorType? = .circleStrokeSpin, color:UIColor? = .blue){
+    public func customIndicator(start:Bool, type:NVActivityIndicatorType? = .circleStrokeSpin, color:UIColor? = UIColor(named: "MainColor")!){
         self.isHidden = !start
         if start{
             if let type = type, let color = color{

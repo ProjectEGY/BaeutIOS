@@ -13,7 +13,7 @@ extension UITextField{
     
     public func addLeftImage(image:UIImage){
         var smallIcon:UIImageView!
-        if Locale.current.languageCode == "en"{
+        if MOLHLanguage.currentAppleLanguage() == "en"{
             self.leftViewMode = .always
             smallIcon = UIImageView(frame: CGRect(x: 12, y: self.frame.height / 2 - 12, width: 20, height: 25))
         }else{
@@ -26,12 +26,10 @@ extension UITextField{
         self.addSubview(smallIcon)
     }
     public func handleArabicLanguage(){
-        if let currentLanguage = LocalizationManager.shared.getLanguage(){
-            if currentLanguage == .Arabic{
+        if MOLHLanguage.currentAppleLanguage() == "ar"{
                 self.textAlignment = .right
                 self.makeTextWritingDirectionRightToLeft(nil)
             }
-        }
     }
     
 //        self.makeTextWritingDirectionRightToLeft(nil)

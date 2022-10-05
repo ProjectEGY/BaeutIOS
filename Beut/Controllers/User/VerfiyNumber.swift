@@ -48,15 +48,23 @@ class VerfiyNumberViewController : UIViewController, UITextFieldDelegate{
         verficationCode.append(digit2.text!)
         verficationCode.append(digit3.text!)
         verficationCode.append(digit4.text!)
+        let encoder = JSONEncoder()
         if let user = userInfo, let pass = userPassword{
             let body = ["Phone":user.phone!, "Password":pass, "VerificationCode":verficationCode]
             NetworkService.shared.verfiyAccount(parameters: body){
                 [weak self] (result) in
 
                 switch result{
-                case .success(_):
+                case .success(let data):
+                   
                     self?.verifyIndicator.customIndicator(start: false)
                     self?.makeViewInVisible(wannaMakeItVisible: false)
+                    guard let errorCode = data.errorCode, errorCode == 0 else {return}
+                    guard let user = data.data else {return}
+                    if let encoded = try? encoder.encode(user) {
+                        UserDefaults.standard.set(encoded, forKey: "userAccountInfo")
+                    }
+                    UserDefaults.standard.isUserLoggedInt = true
                     self?.showAlert()
                 case .failure(let error):
                     self?.verifyIndicator.customIndicator(start: false)
@@ -94,6 +102,8 @@ extension VerfiyNumberViewController{
         
         let myAlret = UIAlertController(title: "Information", message: "AccountActivatedSuccessfully".localized, preferredStyle: .alert)
         myAlret.addAction(UIAlertAction(title: "Ok", style: .default, handler: {_ in
+            
+            self.showMainHome()
             
         }))
         present(myAlret, animated: true, completion: nil)

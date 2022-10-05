@@ -13,7 +13,7 @@ class ForgetPassword: UIViewController {
     @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var forgetPasswordIndicator: NVActivityIndicatorView!
     @IBOutlet weak var lbl: UILabel!
-    @IBOutlet weak var phone: Custom!
+    @IBOutlet weak var phone: CustomUITextField!
    
     private var validation:ValidationService
     
@@ -32,7 +32,6 @@ class ForgetPassword: UIViewController {
         super.viewDidLoad()
         btn.setTitle("resetPassword".localized, for: .normal)
         phone.placeholder = "phonePlaceholder".localized
-        phone.handleArabicLanguage()
         lbl.text = "forgetPasswordLabel".localized
     }
     

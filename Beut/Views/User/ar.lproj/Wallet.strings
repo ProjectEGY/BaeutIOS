@@ -1,6 +1,6 @@
 
-/* Class = "UIButton"; normalTitle = "Current Charge"; ObjectID = "83W-LP-HlV"; */
-"83W-LP-HlV.normalTitle" = "الرصيد الحالي";
+/* Class = "UILabel"; text = "Current charge"; ObjectID = "i32-fV-zls"; */
+"i32-fV-zls.text" = "الرصيد الحالي";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "8nD-rm-HHP"; */
 "8nD-rm-HHP.text" = "Label";

@@ -42,9 +42,9 @@ class ChangeCityViewController:UIViewController{
         
         countriesTableView.isHidden = isCountriesShown
         if isCountriesShown{
-            countryDropDownIcon.setImage(UIImage(named: "up_arrow"), for: .normal)
+            countryDropDownIcon.setImage(UIImage(named: "down_arrow"), for: .normal)
         }else{
-            countryDropDownIcon.setImage(UIImage(named: "down_arrow"), for: .normal)        }
+            countryDropDownIcon.setImage(UIImage(named: "up_arrow"), for: .normal)        }
         isCountriesShown = !isCountriesShown
             
         }
@@ -53,9 +53,9 @@ class ChangeCityViewController:UIViewController{
         isCitiesShown = !isCitiesShown
         citiesTableView.isHidden = isCitiesShown
         if isCitiesShown{
-            cityDropDownIcon.setImage(UIImage(named: "up_arrow"), for: .normal)
+            cityDropDownIcon.setImage(UIImage(named: "down_arrow"), for: .normal)
         }else{
-            cityDropDownIcon.setImage(UIImage(named: "down_arrow"), for: .normal)        }        }
+            cityDropDownIcon.setImage(UIImage(named: "up_arrow"), for: .normal)        }        }
     @IBAction func next(_ sender: Any) {
         UserDefaults.standard.didUserSelectCity = true
         UserDefaults.standard.areaId = areaIdSelectedByUser
@@ -120,7 +120,7 @@ extension ChangeCityViewController:UITableViewDelegate, UITableViewDataSource{
 
         if tableView == countriesTableView{
             areas = countries[indexPath.row].areas!
-            areas.insert(Area(id: 0, countryID: 0, nameAr: "All".localized, nameEn: "All".localized ), at: 0)
+            areas.insert(Area(id: 0, countryID: 0, nameAr: "All".localized, nameEn: "All"), at: 0)
             citiesHight.constant = CGFloat(Double(98 * areas.count))
             citiesTableView.reloadData()
         }

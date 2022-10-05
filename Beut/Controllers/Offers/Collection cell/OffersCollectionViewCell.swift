@@ -23,8 +23,9 @@ class OffersCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var img: UIImageView!
     var quantityValue = 1
     override func awakeFromNib() {
-        self.quantity.text = "\(self.quantityValue)"
         super.awakeFromNib()
+        self.quantity.text = "\(self.quantityValue)"
+        self.price.drawDiagonalLine()
             if #available(iOS 13.0, *) {
                 self.addToBasketBtn.text = "AddToBasket".localized
             } else {
@@ -53,6 +54,15 @@ class OffersCollectionViewCell: UICollectionViewCell {
         }
         if let offerPrice = product.singleOfferPrice{
             self.offerPrice.text = "\(offerPrice)"
+        }
+        
+        guard let isMultiple = product.isMultipleSize, isMultiple == true else {return}
+        guard let sizes = product.sizes, sizes.count > 0 else {return}
+        if let firstOriginalPrice = sizes[0].originalPrice {
+            self.price.text = firstOriginalPrice
+        }
+        if let firstOfferPrice = sizes[0].offerPrice {
+            self.offerPrice.text = firstOfferPrice
         }
     }
 

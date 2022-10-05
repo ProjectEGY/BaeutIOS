@@ -12,9 +12,16 @@ extension UIViewController{
     static var identifier:String{
         return String(describing: self)
     }
-    static func instantiate(storyboardName:String)->Self{
+    public func presentViewController(storyboardName:String, with identifier:String){
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-        return storyboard.instantiateViewController(identifier: identifier) as! Self
+        let vc = storyboard.instantiateViewController(identifier: identifier)
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    public func pushCustomViewController(storyboardName:String, with identifier:String){
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: identifier)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     /// This function disable user interaction with cureent view when there is a proccessing task util it's finished

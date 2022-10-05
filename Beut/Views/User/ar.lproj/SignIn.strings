@@ -1,6 +1,9 @@
 /* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "4UI-mR-gIH"; */
 "4UI-mR-gIH.normalTitle" = "إنشاء حساب";
 
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "4UI-mR-gIH"; */
+"BoH-Qz-6j7.normalTitle" = "الإستمرار";
+
 /* Class = "UILabel"; text = "Forget Password?"; ObjectID = "4gp-JX-KsL"; */
 "4gp-JX-KsL.text" = "نسيت كلمة المرور؟";
 

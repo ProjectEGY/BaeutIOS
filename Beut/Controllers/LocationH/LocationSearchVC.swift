@@ -16,6 +16,7 @@ class LocationSearchVC: UIViewController, UISearchResultsUpdating  {
  
     var fullAddress = ""
     var previousLocation:CLLocation? = nil
+    var locationSelectedByUser:CLLocation?
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var locationInfo:UILabel!
     
@@ -37,7 +38,9 @@ class LocationSearchVC: UIViewController, UISearchResultsUpdating  {
     
     @IBAction func userDidSelectAddress(_ sender: UIButton) {
         if #available(iOS 13.0, *) {
+            AddressViewController.didUserSelectLocationUsingMap = true
             AddressViewController.street = self.fullAddress
+            AddressViewController.locationSelectedByUser = self.locationSelectedByUser
         } else {
             // Fallback on earlier versions
         }
@@ -119,7 +122,7 @@ extension LocationSearchVC:MKMapViewDelegate{
     }
     
     private func getLocationInfo(location:CLLocation){
-        
+        self.locationSelectedByUser = location
         fullAddress = ""
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(location) { places, error in

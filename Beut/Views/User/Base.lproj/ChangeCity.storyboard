@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWj-sf-vmJ">
-                                <rect key="frame" x="66" y="801" width="289" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWj-sf-vmJ">
+                                <rect key="frame" x="62.5" y="815" width="289" height="43"/>
                                 <color key="backgroundColor" name="EsfenjaColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Next">
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-JG-hQY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="763"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WAM-uB-4P4">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
@@ -60,7 +60,7 @@
                                                         </constraints>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title=" " image="down_arrow">
+                                                        <state key="normal" title=" " image="up_arrow">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
@@ -94,10 +94,7 @@
                                                 <rect key="frame" x="0.0" y="105" width="414" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGQ-iN-bnB">
-                                                        <rect key="frame" x="21" y="16" width="127" height="23"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="127" id="Dcj-EU-5JK"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="21" y="16" width="82.5" height="23"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -110,7 +107,7 @@
                                                         </constraints>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="down_arrow">
+                                                        <state key="normal" image="up_arrow">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
@@ -166,17 +163,18 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eWj-sf-vmJ" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="25b-Je-eY1"/>
                             <constraint firstItem="Azs-JG-hQY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="E8i-DW-o1w"/>
+                            <constraint firstItem="eWj-sf-vmJ" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.698068" id="FZq-xc-sqY"/>
                             <constraint firstItem="pPz-Cb-IxP" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.112165" id="M2n-zQ-Pi5"/>
                             <constraint firstItem="pPz-Cb-IxP" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.294686" id="RYA-lX-x24"/>
                             <constraint firstItem="Azs-JG-hQY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ReW-xi-G1B"/>
-                            <constraint firstItem="eWj-sf-vmJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="66" id="Ueb-yZ-2vg"/>
                             <constraint firstItem="Azs-JG-hQY" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Wt3-Js-6jy"/>
                             <constraint firstItem="pPz-Cb-IxP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XGB-ME-mo8"/>
-                            <constraint firstItem="eWj-sf-vmJ" firstAttribute="top" secondItem="Azs-JG-hQY" secondAttribute="bottom" id="edB-Xa-0Hq"/>
                             <constraint firstItem="pPz-Cb-IxP" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ego-gt-Wbv"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="eWj-sf-vmJ" secondAttribute="bottom" constant="14" id="k3F-if-AHG"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eWj-sf-vmJ" secondAttribute="trailing" constant="59" id="uqg-D4-mBw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="eWj-sf-vmJ" secondAttribute="bottom" constant="4" id="ffc-aI-5rX"/>
+                            <constraint firstItem="eWj-sf-vmJ" firstAttribute="top" secondItem="Azs-JG-hQY" secondAttribute="bottom" constant="8" symbolic="YES" id="kXK-cS-cFY"/>
+                            <constraint firstItem="eWj-sf-vmJ" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0479911" id="sSB-FG-Jcf"/>
                         </constraints>
                     </view>
                     <connections>
@@ -207,7 +205,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="down_arrow" width="20" height="11"/>
+        <image name="up_arrow" width="20" height="11"/>
         <namedColor name="EsfenjaColor">
             <color red="0.11100000143051147" green="0.29300001263618469" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

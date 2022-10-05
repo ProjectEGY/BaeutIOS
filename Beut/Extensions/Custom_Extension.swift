@@ -27,28 +27,31 @@ class CustomForComplaints: UITextField{
 //    return CGRect(x: bounds.origin.x + 15, y: bounds.origin.y + 15, width: bounds.width, height: bounds.height)
 //}
 }
-class Custom: UITextField {
+class CustomUITextField: UITextField {
    
     
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
-        if Locale.current.languageCode == "ar"{
-            return CGRect(x: bounds.origin.x - 15, y: bounds.origin.y, width: bounds.width, height: bounds.height)
-        }
-            return CGRect(x: bounds.origin.x + 15, y: bounds.origin.y, width: bounds.width, height: bounds.height)
-        }
+    let padding = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 5)
+    let arabicPadding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 15)
 
-        override func editingRect(forBounds bounds: CGRect) -> CGRect {
-            if Locale.current.languageCode == "ar"{
-                return CGRect(x: bounds.origin.x - 15, y: bounds.origin.y, width: bounds.width, height: bounds.height)
-            }
-            return CGRect(x: bounds.origin.x + 15, y: bounds.origin.y, width: bounds.width, height: bounds.height)
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
+        if MOLHLanguage.currentAppleLanguage() == "ar"{
+            return bounds.inset(by: arabicPadding)
         }
-    
-    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        if Locale.current.languageCode == "ar"{
-            return CGRect(x: bounds.origin.x - 15, y: bounds.origin.y, width: bounds.width, height: bounds.height)
+        return bounds.inset(by: padding)
+    }
+
+    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        if MOLHLanguage.currentAppleLanguage() == "ar"{
+            return bounds.inset(by: arabicPadding)
         }
-        return CGRect(x: bounds.origin.x + 15, y: bounds.origin.y, width: bounds.width, height: bounds.height)
+        return bounds.inset(by: padding)
+    }
+
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+        if MOLHLanguage.currentAppleLanguage() == "ar"{
+            return bounds.inset(by: arabicPadding)
+        }
+        return bounds.inset(by: padding)
     }
 
 }

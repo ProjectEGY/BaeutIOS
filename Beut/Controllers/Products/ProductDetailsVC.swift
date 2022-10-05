@@ -13,7 +13,6 @@ class ProductDetailsVC: UIViewController {
     
     @IBOutlet weak var sizeView: UIView!
     @IBOutlet weak var indicator: NVActivityIndicatorView!
-    @IBOutlet weak var diagonal: UIImageView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var sizesTableView: UITableView!
     @IBOutlet weak var productQuantity: UILabel!
@@ -88,11 +87,11 @@ class ProductDetailsVC: UIViewController {
             //Here, the product does not have sizes
             if let offerPrice = product.singleOfferPrice, offerPrice != "" {
                 if doesStringHasNumbers(with: offerPrice) {
-                    diagonal.isHidden = false
+                    self.productOriginalPrice.drawDiagonalLine()
                     productOfferPrice.isHidden = false
                     productOfferPrice.text = offerPrice
                 }else{
-                    diagonal.isHidden = true
+                    
                     productOfferPrice.isHidden = true
                 }
 
@@ -118,11 +117,11 @@ class ProductDetailsVC: UIViewController {
                 
 
                 if doesStringHasNumbers(with: offerPrice) {
-                    diagonal.isHidden = false
+                    self.productOriginalPrice.drawDiagonalLine()
                     productOfferPrice.isHidden = false
                     productOfferPrice.text = offerPrice
                 }else{
-                    diagonal.isHidden = true
+                   
                     productOfferPrice.isHidden = true
                 }
                 

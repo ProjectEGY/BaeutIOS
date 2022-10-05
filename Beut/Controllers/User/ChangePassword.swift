@@ -27,7 +27,8 @@ class ChangePasswordViewController: UIViewController {
         self.validation = ValidationService()
         super.init(coder: coder)
     }
-  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false

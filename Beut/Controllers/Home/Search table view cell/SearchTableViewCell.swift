@@ -11,7 +11,6 @@ class SearchTableViewCell: UITableViewCell {
     static let identifier = String(describing: SearchTableViewCell.self)
 
     @IBOutlet weak var img:UIImageView!
-    @IBOutlet weak var diagonal:UIImageView!
     @IBOutlet weak var name:UILabel!
     @IBOutlet weak var originalPrice:UILabel!
     @IBOutlet weak var offerPrice:UILabel!
@@ -68,11 +67,10 @@ class SearchTableViewCell: UITableViewCell {
             let decimalRange = offerPrice.rangeOfCharacter(from: decimalCharacters)
 
             if decimalRange != nil {
-                self.diagonal.isHidden = false
+                originalPrice.drawDiagonalLine()
                 self.offerPrice.isHidden = false
                 self.offerPrice.text = offerPrice
             }else{
-                diagonal.isHidden = true
                 self.offerPrice.isHidden = true
             }
             

@@ -8,8 +8,9 @@
 import UIKit
 import NVActivityIndicatorView
 @available(iOS 13.0, *)
-class ComplaintsViewController: UIViewController {
+class ComplaintsViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var indicator: NVActivityIndicatorView!
     @IBOutlet weak var complaintMessage: CustomForComplaints!
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ class ComplaintsViewController: UIViewController {
     @IBAction func sendComplaint(_ sender: Any) {
         if complaintMessage.text == "" {
             AlertView.showAlertBox(title: "Error".localized, message: "ComplaintsErrorMessage".localized) { action in
-                        // Okay action code
+               
             }.present(on: self) {}
         }else{
             if let message = complaintMessage.text{
@@ -31,10 +32,20 @@ class ComplaintsViewController: UIViewController {
         }
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+            scrollView.setContentOffset(CGPoint(x: 0, y: 150), animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        return false
+    }
+    
     private func sendComplaints(message:String){
         indicator.customIndicator(start: true, type: .ballTrianglePath)
         self.makeViewInVisible(wannaMakeItVisible: true)
-        let body = ["Message":"message"]
+        let body = ["Message":message]
         NetworkService.shared.sendComplaints(parameters: body){
             [weak self] (result) in
             switch result{
@@ -43,8 +54,10 @@ class ComplaintsViewController: UIViewController {
                 self?.makeViewInVisible(wannaMakeItVisible: false)
                 
                 if data.errorCode == 0{
-                    AlertView.showAlertBox(title: "Information", message: "Thanks, your complaint is sent successfully") { action in
-                                // Okay action code
+                    AlertView.showAlertBox(title: "Information", message: "ComplaintsThanks".localized) { action in
+                        let storyboard = UIStoryboard(name: "TabBarNavigator", bundle: nil)
+                        let home = storyboard.instantiateViewController(withIdentifier: "MainTabID") as! MyTabBarViewController
+                        self?.present(home, animated: true)
                     }.present(on: self!) {}
                 }else{
                     AlertView.showAlertBox(title: "Error".localized, message: "Something went wrong") { action in

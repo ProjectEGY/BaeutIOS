@@ -11,9 +11,9 @@ extension String{
     var asURL:URL?{
         return URL(string: self)
     }
-//    var localized:String{
-//        return NSLocalizedString(self, comment: "")
-//    }
+    var localized:String{
+        return NSLocalizedString(self, comment: "")
+    }
 }
 
 extension Date{
