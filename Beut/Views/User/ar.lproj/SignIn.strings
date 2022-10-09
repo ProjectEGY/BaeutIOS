@@ -19,8 +19,8 @@
 /* Class = "UITextField"; placeholder = "Name"; ObjectID = "GVR-rB-u0i"; */
 "GVR-rB-u0i.placeholder" = "الاسم";
 
-/* Class = "UIButton"; normalTitle = "Sign In with Facebook"; ObjectID = "K90-4j-wXp"; */
-"K90-4j-wXp.normalTitle" = "متابعة بحساب فيسبوك";
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "RLR-9H-g7y"; */
+"RLR-9H-g7y.normalTitle" = "تخطي";
 
 /* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "L9T-U6-sm3"; */
 "L9T-U6-sm3.placeholder" = "رقم المستخدم";

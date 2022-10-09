@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesTableViewCell" rowHeight="293" id="KGk-i7-Jjw" customClass="CategoriesTableViewCell" customModule="Esfenja" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="293"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="293"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-OZ-6R4">
+                        <rect key="frame" x="81" y="55" width="188" height="135"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zV6-UZ-bDA">
+                        <rect key="frame" x="81" y="212" width="188" height="37"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="xIj-OZ-6R4" secondAttribute="bottom" constant="92" id="FEO-xg-TJJ"/>
+                    <constraint firstItem="xIj-OZ-6R4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="61" id="N58-uE-Jbx"/>
+                    <constraint firstItem="xIj-OZ-6R4" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="XLS-M2-Qm4"/>
+                    <constraint firstItem="xIj-OZ-6R4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="fdh-wu-8eI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnCatName" destination="zV6-UZ-bDA" id="cuR-zs-AWW"/>
+                <outlet property="catImage" destination="xIj-OZ-6R4" id="vA6-ty-sVb"/>
+            </connections>
+            <point key="canvasLocation" x="-39.130434782608695" y="194.53125"/>
+        </tableViewCell>
+    </objects>
+</document>

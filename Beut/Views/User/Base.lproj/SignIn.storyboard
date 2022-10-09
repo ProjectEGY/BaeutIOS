@@ -113,6 +113,22 @@
                                                                     <outletCollection property="gestureRecognizers" destination="neE-6v-yQr" appends="YES" id="KRO-Yd-FOF"/>
                                                                 </connections>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLR-9H-g7y" colorLabel="IBBuiltInLabel-Red">
+                                                                <rect key="frame" x="295" y="569" width="119" height="31"/>
+                                                                <color key="backgroundColor" name="MainColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Skip">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="skipLogin:" destination="e5G-hs-N3k" eventType="touchUpInside" id="AaV-eG-2GX"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -120,6 +136,7 @@
                                                             <constraint firstItem="9yI-zk-nMY" firstAttribute="width" secondItem="ko3-Lg-jTy" secondAttribute="width" multiplier="0.555556" id="22K-Ee-95F"/>
                                                             <constraint firstItem="cph-uK-qvH" firstAttribute="centerX" secondItem="ko3-Lg-jTy" secondAttribute="centerX" id="2K7-eY-7NA"/>
                                                             <constraint firstItem="9yI-zk-nMY" firstAttribute="centerX" secondItem="ko3-Lg-jTy" secondAttribute="centerX" id="2dt-yA-co8"/>
+                                                            <constraint firstItem="RLR-9H-g7y" firstAttribute="width" secondItem="ko3-Lg-jTy" secondAttribute="width" multiplier="0.28744" id="5bD-Ox-sFO"/>
                                                             <constraint firstItem="4gp-JX-KsL" firstAttribute="height" secondItem="ko3-Lg-jTy" secondAttribute="height" multiplier="0.0533333" id="6u9-Sv-l80"/>
                                                             <constraint firstItem="cYy-hZ-WzL" firstAttribute="centerX" secondItem="ko3-Lg-jTy" secondAttribute="centerX" id="Ahb-dF-ek7"/>
                                                             <constraint firstItem="Cm4-gT-oZX" firstAttribute="top" secondItem="cph-uK-qvH" secondAttribute="bottom" constant="14" id="BNa-SB-wS0"/>
@@ -127,6 +144,7 @@
                                                             <constraint firstItem="Cm4-gT-oZX" firstAttribute="centerX" secondItem="ko3-Lg-jTy" secondAttribute="centerX" id="GHf-eR-J8X"/>
                                                             <constraint firstItem="9yI-zk-nMY" firstAttribute="top" secondItem="ko3-Lg-jTy" secondAttribute="top" constant="47" id="GNt-6l-uH7"/>
                                                             <constraint firstItem="cph-uK-qvH" firstAttribute="width" secondItem="ko3-Lg-jTy" secondAttribute="width" multiplier="0.777778" id="KkX-xo-tPo"/>
+                                                            <constraint firstItem="RLR-9H-g7y" firstAttribute="height" secondItem="ko3-Lg-jTy" secondAttribute="height" multiplier="0.0516667" id="UAw-4t-Vsa"/>
                                                             <constraint firstItem="cYy-hZ-WzL" firstAttribute="top" secondItem="Cm4-gT-oZX" secondAttribute="bottom" constant="18" id="URd-tS-mJh"/>
                                                             <constraint firstItem="4gp-JX-KsL" firstAttribute="width" secondItem="ko3-Lg-jTy" secondAttribute="width" multiplier="0.905797" id="VcH-Kn-mSF"/>
                                                             <constraint firstItem="cph-uK-qvH" firstAttribute="height" secondItem="ko3-Lg-jTy" secondAttribute="height" multiplier="0.0833333" id="YXH-kg-bDf"/>
@@ -136,9 +154,11 @@
                                                             <constraint firstItem="ghF-BE-gqd" firstAttribute="width" secondItem="ko3-Lg-jTy" secondAttribute="width" multiplier="0.908213" id="fIO-TY-oMc"/>
                                                             <constraint firstItem="4gp-JX-KsL" firstAttribute="top" secondItem="cYy-hZ-WzL" secondAttribute="bottom" constant="22" id="gNo-DH-UH0"/>
                                                             <constraint firstItem="cph-uK-qvH" firstAttribute="top" secondItem="9yI-zk-nMY" secondAttribute="bottom" constant="21" id="gey-MN-nkf"/>
+                                                            <constraint firstAttribute="trailing" secondItem="RLR-9H-g7y" secondAttribute="trailing" id="glr-VP-wSz"/>
                                                             <constraint firstItem="Cm4-gT-oZX" firstAttribute="height" secondItem="ko3-Lg-jTy" secondAttribute="height" multiplier="0.0833333" id="h5E-0U-Wzz"/>
                                                             <constraint firstItem="cYy-hZ-WzL" firstAttribute="height" secondItem="ko3-Lg-jTy" secondAttribute="height" multiplier="0.0933333" id="jc3-ev-ib4"/>
                                                             <constraint firstItem="cYy-hZ-WzL" firstAttribute="width" secondItem="ko3-Lg-jTy" secondAttribute="width" multiplier="0.47343" id="kE0-kD-lEV"/>
+                                                            <constraint firstAttribute="bottom" secondItem="RLR-9H-g7y" secondAttribute="bottom" id="mU5-b4-YNx"/>
                                                             <constraint firstItem="ghF-BE-gqd" firstAttribute="top" secondItem="4gp-JX-KsL" secondAttribute="bottom" constant="28" id="rQI-Z2-G5v"/>
                                                             <constraint firstItem="9yI-zk-nMY" firstAttribute="height" secondItem="ko3-Lg-jTy" secondAttribute="height" multiplier="0.213333" id="uKS-EH-jAC"/>
                                                         </constraints>

@@ -1854,11 +1854,15 @@
                                                             <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Leu-Na-MR1">
                                                                 <rect key="frame" x="8" y="8" width="398" height="164"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <gestureRecognizers/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
                                                                         <real key="value" value="7"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="gf1-PD-Flg" appends="YES" id="Gmr-3B-5mr"/>
+                                                                </connections>
                                                             </view>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2026,11 +2030,6 @@
                 <tapGestureRecognizer id="gf1-PD-Flg" userLabel="offers">
                     <connections>
                         <action selector="openOffers:" destination="ZWi-OT-5To" id="fYt-UD-Ayn"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="hJF-kt-9Xz" userLabel="custom order">
-                    <connections>
-                        <segue destination="kTm-U2-SG2" kind="show" id="Xbr-x2-nds"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -2421,7 +2420,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ibs-PX-Qkz"/>
+        <segue reference="xzx-NT-sHw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Icon Marker-1" width="16" height="19"/>
@@ -2431,7 +2430,7 @@
         <image name="bell_black" width="30" height="30"/>
         <image name="cash" width="30" height="30"/>
         <image name="circle" width="40" height="40"/>
-        <image name="complaints" width="410" height="410"/>
+        <image name="complaints" width="25" height="25"/>
         <image name="credit_card" width="30" height="20"/>
         <image name="delete" width="50" height="50"/>
         <image name="emptyBasket" width="359.5" height="235.5"/>
