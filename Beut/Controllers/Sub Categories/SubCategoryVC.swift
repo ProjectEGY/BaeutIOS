@@ -19,7 +19,6 @@ class SubCategoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpConfigurations()
-        
         getCategories()
     }
     
